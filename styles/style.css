@@ -1,3 +1,12 @@
+@import "./variables.css";
+
+@font-face {
+  font-family: "Uniwars";
+  src: url("../fonts/uniWarsFont/UniwarsSemiBold.ttf");
+  font-weight: 700;
+  font-style: bold;
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -12,117 +21,24 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
 */
-/* 
-$break-to-desktop: 1024px;
-@media (min-width: $break-to-desktop) {
-  .image {
-    background-image: url("desktop-image.jpg");
-  }
+
+header img {
+  max-width: 100%;
+  height: auto;
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
-  .image {
-    background-image: url("tablet-image.jpg");
-  }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Uniwars", sans-serif;
 }
 
-@media (max-width: 767px) {
-  .image {
-    background-image: url("mobile-image.jpg");
-  }
-} */
-/* .diagonal-gradient {
-  background: linear-gradient(
-    to bottom right,
-    rgba(46, 49, 146, 1) 0%,
-    rgba(53, 51, 148, 1) 35%,
-    rgba(2, 0, 36, 1) 100%
-  ); 
- } */
+/*Your code here: */
 .gradientWrapper {
+  margin-top: -3px;
   padding: 50px;
   background: linear-gradient(
     to top left,
@@ -130,55 +46,41 @@ $break-to-desktop: 1024px;
     rgba(46, 49, 146, 1) 35%,
     rgba(2, 0, 36, 1) 100%
   );
+}
 
-  /* border-color: linear-gradient(
+/* border-color: linear-gradient(
     to bottom right,
     rgba(46, 49, 146, 1) 0%,
     rgba(53, 51, 148, 1) 35%,
     rgba(2, 0, 36, 1) 100%
   ); */
-}
+
 .contentWrapper {
-  padding: 50px;
+  padding: 25px;
   background-color: white;
+  border-radius: 5px;
+  box-shadow: 6px 8px 30px 0px #00000070;
 }
 body {
   margin: 0;
   background-color: #353394;
 }
 
-header {
-  background-image: url("../assets/MobileHeader.jpg");
-  /* width: 100%; */
-  min-height: 780px;
-
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @media (min-width: 768px) {
-    background-image: url("../assets/TabletHeader.jpg");
-    background-repeat: no-repeat;
-    /* width: 768px; */
-    height: 577px;
-  }
-
-  @media (min-width: 1024px) {
-    background-image: url("../assets/DesktopHeader.jpg");
-    /* width: 1440px; */
-    height: 1024px;
-  }
-}
-
 h1 {
-  font: UniwarsW00-SemiBold;
   text-align: center;
 }
 h2 {
   text-align: center;
 }
 p {
+  font-family: Chakra Petch;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 27.3px;
   margin-bottom: 10px;
+  text-align: left;
+  color: #2f3293;
+  background-color: white;
 }
 .footerP {
   color: white;
@@ -208,6 +110,7 @@ p {
   width: 100%;
   height: auto;
   border-radius: 0%; /* Make the image round */
+  /*da sloja background color samo tuk*/
 }
 
 .choreographer-info {
@@ -221,6 +124,10 @@ p {
 .choreographer-info p {
   margin: 5px 0;
 }
+
+/* shadow na kutiqta
+ da e centriran teksta i da e v lilavo
+ i da e curvnat boxa */
 
 /* .tablet {
   width: 768px;

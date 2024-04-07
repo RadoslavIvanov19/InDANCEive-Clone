@@ -1,42 +1,43 @@
-import "./style.css";
-import typescriptLogo from "./typescript.svg";
-import viteLogo from "/vite.svg";
-import { setupCounter } from "./counter.ts";
-import image from "./TCPic.jpg";
+import desktop from "../public/DesktopHeader.jpg";
+import tablet from "../public/TabletHeader.jpg";
+import mobile from "../public/MobileHeader.jpg";
+
+let currentHeader = mobile; // Initialize with mobile image by default
+const mobileMaxWidth = 376; // Maximum width for mobile devices
+const tabletMaxWidth = 769; // Maximum width for tablet devices
+
+const isMobile = () => {
+  return window.innerWidth < mobileMaxWidth;
+};
+
+const isTablet = () => {
+  return window.innerWidth < tabletMaxWidth && !isMobile();
+};
+
+const checkScreenSize = () => {
+  if (isMobile()) {
+    currentHeader = mobile;
+  } else if (isTablet()) {
+    currentHeader = tablet;
+  } else {
+    currentHeader = desktop;
+  }
+  updateHeaderImage();
+};
+
+const updateHeaderImage = () => {
+  const headerImage = document.querySelector<HTMLImageElement>("#header-image");
+  if (headerImage) {
+    headerImage.src = currentHeader;
+  }
+};
+
+checkScreenSize();
+
+window.addEventListener("resize", checkScreenSize);
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-<div>
-<a href="https://vitejs.dev" target="_blank">
-<img src="${viteLogo}" class="logo" alt="Vite logo" />
-</a>
-<a href="https://www.typescriptlang.org/" target="_blank">
-<img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-</a>
-<h1>Vite + TypeScript</h1>
-<div class="card">
-<button id="counter" type="button"></button>
-</div>
-<p class="read-the-docs">
-Click on the Vite and TypeScript logos to learn more
-</p>
-</div>
+  <header>
+    <img id="header-image" src="${currentHeader}" alt="Header Image" />
+  </header>
 `;
-
-setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
-// document.querySelector("img").src = image;
-
-/* Код за разпознаване на платформата от която се влиза*/
-/*
-window.onload = function() {
-    var userAgent = navigator.userAgent.toLowerCase();
-    var imageUrl;
-
-    if (userAgent.match(/android/i) || userAgent.match(/webos/i) || userAgent.match(/iphone/i) || userAgent.match(/ipad/i) || userAgent.match(/ipod/i) || userAgent.match(/blackberry/i) || userAgent.match(/windows phone/i)) {
-        imageUrl = 'mobile-image.jpg';
-    } else {
-        imageUrl = 'desktop-image.jpg';
-    }
-
-    document.getElementById('image').src = imageUrl;
-};
-*/
