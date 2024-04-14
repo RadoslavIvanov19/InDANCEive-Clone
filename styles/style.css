@@ -37,31 +37,55 @@ h5 {
   text-align: center;
 }
 
-.informationList {
-  font-size: 32px;
+h1 {
+  font-size: 36px;
 }
 
+p,
+li {
+  font-size: 16px;
+}
+
+/* .informationList {
+  font-size: 32px;
+} */
+
 .gradientWrapper {
+  /* word-wrap: break-word; */
   position: relative;
   margin-top: -3px;
-  padding: 50px;
+  padding: 20px;
   background: linear-gradient(
+      to top left,
+      #2f3293 2.55%,
+      #373393 22.98%,
+      #dd5fa4 65.2%,
+      #f9d2e4 93.34%
+    ),
+    radial-gradient(
+        106.82% 106.82% at 100% -5.22%,
+        #f9d2e4 0%,
+        rgba(229, 229, 229, 0) 13.58%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+  /* background: linear-gradient(
     to top left,
     rgba(53, 51, 148, 1) 0%,
     rgba(46, 49, 146, 1) 35%,
     rgba(2, 0, 36, 1) 100%
-  );
+  ); */
 }
 
 .contentWrapper {
-  font-size: 32px;
-  padding: 25px;
+  /* font-size: 32px; */
+  padding: 15px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 6px 8px 30px 0px #00000070;
   color: #353394;
-  max-width: 50%;
-  margin-left: 25%; /* Devides the screen in 4 pieces,placing it right in the middle */
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 body {
@@ -71,7 +95,7 @@ body {
 p {
   text-align: left;
   font-family: Chakra Petch;
-  font-size: 32px;
+  /* font-size: 32px; */
   font-weight: 400;
   line-height: 27.3px;
 }
@@ -98,11 +122,6 @@ p {
 
 @media (min-width: 768px) {
   .flexWrapper {
-    h1,
-    h2,
-    p {
-      text-align: center;
-    }
     max-width: 100%;
     flex-direction: row;
     justify-content: center;
@@ -137,6 +156,20 @@ p {
 .choreographer-info p {
   margin: 5px 0;
 }
+
+.program {
+  padding: 50px;
+}
+.informationProgram {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  max-width: 40%;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 6px 8px 30px 0px #00000070;
+}
+
 a {
   text-decoration: none;
   color: white;
