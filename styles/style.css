@@ -1,27 +1,18 @@
 @import "./variables.css";
 
 @font-face {
-  font-family: "Uniwars";
-  src: url("../fonts/uniWarsFont/UniwarsSemiBold.ttf");
-  font-weight: 700;
+  font-family: "Orbitron";
+  src: url("../fonts/Orbitron/Orbitron-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("../fonts/Orbitron/Orbitron-Bold.ttf");
+  font-weight: 600;
   font-style: bold;
 }
-
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-*/
 
 header img {
   max-width: 100%;
@@ -33,12 +24,21 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Uniwars", sans-serif;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 400;
   text-align: center;
 }
 
 h1 {
   font-size: 36px;
+}
+
+h1 span {
+  font-weight: 600;
+}
+
+.informationList {
+  font-size: 24px;
 }
 
 p,
@@ -53,28 +53,33 @@ li {
 .gradientWrapper {
   /* word-wrap: break-word; */
   position: relative;
-  margin-top: -3px;
-  padding: 20px;
-  background: linear-gradient(
-      to top left,
-      #2f3293 2.55%,
-      #373393 22.98%,
-      #dd5fa4 65.2%,
-      #f9d2e4 93.34%
+  margin-top: -5px;
+  padding: 50px;
+  background: radial-gradient(
+      at top right,
+      rgb(249, 210, 228, 0.7) 0%,
+      rgba(255, 255, 255, 0) 11%
     ),
-    radial-gradient(
-        106.82% 106.82% at 100% -5.22%,
-        #f9d2e4 0%,
-        rgba(229, 229, 229, 0) 13.58%
-      )
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    linear-gradient(
+      -10deg,
+      rgba(47, 50, 147, 1) 0%,
+      rgba(55, 51, 147, 1) 25%,
+      rgba(221, 95, 164, 1) 84%,
+      rgba(249, 210, 228, 1) 100%
+    );
+  overflow: hidden;
+  z-index: 0;
 
-  /* background: linear-gradient(
-    to top left,
-    rgba(53, 51, 148, 1) 0%,
-    rgba(46, 49, 146, 1) 35%,
-    rgba(2, 0, 36, 1) 100%
-  ); */
+  .noiseFilter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../public/noise.svg);
+    opacity: 0.4;
+    z-index: -1;
+  }
 }
 
 .contentWrapper {
@@ -94,8 +99,7 @@ body {
 
 p {
   text-align: left;
-  font-family: Chakra Petch;
-  /* font-size: 32px; */
+  font-size: 24px;
   font-weight: 400;
   line-height: 27.3px;
 }
