@@ -12,7 +12,7 @@ const choreographersList = [
     personName: 'Obamasim Teodoris',
     url: '#',
     urlTitle: '@theTitleName',
-    img: 'MichaelScott.jpg',
+    img: 'questionMark.svg',
   },
   {
     personName: 'Zing the Zang',
@@ -58,12 +58,10 @@ export class ChoreographersList extends LitElement {
       max-width: 240px
     }
 
-    .choreographer-image img {
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      border-radius: 5px 5px 5px 0px;
+    .choreographer-image {
+      height:  240px;
+      width: 240px;
+      border-radius: 5px 5px 0 0; 
     }
 
     .choreographer-info {
@@ -120,8 +118,7 @@ export class ChoreographersList extends LitElement {
       <div class="flexWrapper">
         ${choreographersList.map(({ personName, url, urlTitle, img }) => html`
           <div class="choreographer">
-            <div class="choreographer-image">
-              <img src=${img} alt="Person Image" />
+            <div class="choreographer-image" style='background: url(${img}) center no-repeat;'>
             </div>
             <div class="choreographer-info">
               <a href=${url}>
