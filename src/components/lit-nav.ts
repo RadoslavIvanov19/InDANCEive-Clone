@@ -13,7 +13,7 @@ const navigationList = [
     url: '#choreographers',
   },
   {
-    title: 'информация',
+    title: 'график',
     url: '#info',
   },
   {

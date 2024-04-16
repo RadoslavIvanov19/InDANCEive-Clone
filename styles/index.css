@@ -46,7 +46,6 @@ h1 span {
 .informationList {
   font-size: 24px;
 }
-
 p,
 li {
   font-size: 16px;
@@ -105,20 +104,10 @@ body {
 }
 
 p {
-  text-align: left;
+  /* text-align: left; */
   font-size: 24px;
   font-weight: 400;
   line-height: 27.3px;
-}
-
-.footerP {
-  color: rgb(255, 255, 255);
-  margin: 0px;
-}
-
-.footer {
-  padding: 20px;
-  background-color: #353394;
 }
 
 .underlined {
@@ -134,34 +123,56 @@ p {
 @media (min-width: 768px) {
   .flexWrapper {
     max-width: 100%;
+    flex-flow: row wrap;
     flex-direction: row;
     justify-content: center;
     justify-content: space-around;
     padding: 30px;
-    gap: 30px;
+    gap: 60px;
   }
 }
 
 .choreographer {
-  max-width: 300px;
-  margin-bottom: 30px;
+  width: 360.6px;
+  height: 580px;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  margin: 30px;
   border-radius: 5px;
-  background-color: #353394;
+  background-color: white;
   box-shadow: 6px 8px 30px 0px #00000070;
 }
 
+.choreographer-info > a {
+  text-decoration: none;
+  color: #353394;
+}
+
+.choreographer-info > a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+.choreographer-info > a:link:visited {
+  color: #353394;
+}
+
 .choreographer-image img {
-  border-radius: 5px 5px 0px 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px 5px 5px 0px;
 }
 
 .choreographer-info {
   padding: 10px;
-  color: white;
+  color: #353394;
   text-align: center;
 }
 
 .choreographer-info h2 {
-  margin-top: 0;
+  margin-top: 10px;
 }
 
 .choreographer-info p {
@@ -171,25 +182,38 @@ p {
 .program {
   padding: 50px;
 }
+
 .informationProgram {
   margin-left: auto;
   margin-right: auto;
   align-items: center;
-  max-width: 40%;
-  padding: 50px;
+
+  padding: 15px;
   border-radius: 5px;
   box-shadow: 6px 8px 30px 0px #00000070;
 }
 
-a {
+.footer {
+  padding: 50px;
+  background-color: #353394;
+}
+
+.footerP p {
+  padding: 150px;
+}
+.footerP {
+  font-weight: bold;
+  display: block;
   text-decoration: none;
+  color: white;
+  margin: 0px;
+}
+
+.footerP > a:visited {
   color: white;
 }
 
-a:hover {
+.footerP > a:hover {
   text-decoration: underline;
   color: blue;
 }
-/*<!-- links on hover should have underline -->
-<!-- Links should be white color -->
-<!-- color on link  --> */
