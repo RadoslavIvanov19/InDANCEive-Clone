@@ -12,31 +12,31 @@ const choreographersList = [
     personName: 'Obamasim Teodoris',
     url: '#',
     urlTitle: '@theTitleName',
-    img: 'questionMark.svg',
+    img: 'MichaelScott.jpg',
   },
   {
     personName: 'Zing the Zang',
     url: '#info',
     urlTitle: '@theTitleName',
-    img: 'MichaelScott.jpg',
+    img: 'questionMark.svg',
   },
   {
-    personName: 'Counter Construction',
+    personName: '.....',
     url: '#contacts',
-    urlTitle: '@theTitleName',
-    img: 'MichaelScott.jpg',
+    urlTitle: '',
+    img: 'questionMark.svg',
   },
   {
-    personName: 'Counter Construction',
+    personName: '.....',
     url: '#contacts',
-    urlTitle: '@theTitleName',
-    img: 'MichaelScott.jpg',
+    urlTitle: '',
+    img: 'questionMark.svg',
   },
   {
-    personName: 'Counter Construction',
+    personName: '.....',
     url: '#contacts',
-    urlTitle: '@theTitleName',
-    img: 'MichaelScott.jpg',
+    urlTitle: '',
+    img: 'questionMark.svg',
   },
 ];
 
@@ -65,10 +65,14 @@ export class ChoreographersList extends LitElement {
     }
 
     .choreographer-info {
-      padding: 10px 10px 20px 10px;
+      padding: 10px 15px 20px 15px;
+      min-height: 126px;
       color: #353394;
       text-align: center;
       font-family: "Orbitron", sans-serif;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       
       h2 {
         margin-bottom: 10px;
@@ -77,6 +81,10 @@ export class ChoreographersList extends LitElement {
       span {
         font-family: "ChakraPetch", sans-serif;
         font-size: 20px;
+      }
+
+      a { 
+        margin: 0 auto;
       }
     }
 
@@ -102,13 +110,11 @@ export class ChoreographersList extends LitElement {
 
     @media (min-width: 768px) {
       .flexWrapper {
-        max-width: 100%;
+        max-width: 1024px;
         flex-flow: row wrap;
-        flex-direction: row;
         justify-content: center;
-        justify-content: space-around;
         padding: 30px;
-        gap: 60px;
+        margin: 0 auto;
       }
     }
   `;
