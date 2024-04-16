@@ -14,10 +14,16 @@
   font-style: bold;
 }
 
-header img {
+* { touch-action: manipulation; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* header img {
   max-width: 100%;
   height: auto;
-}
+} */
 
 h1,
 h2,
@@ -44,6 +50,7 @@ h1 span {
 p,
 li {
   font-size: 16px;
+  font-family: 'ChakraPetch', sans-serif;
 }
 
 /* .informationList {
@@ -76,7 +83,7 @@ li {
     left: 0;
     height: 100%;
     width: 100%;
-    background: url(../public/noise.svg);
+    background: url(/noise.svg);
     opacity: 0.4;
     z-index: -1;
   }

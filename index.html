@@ -5,10 +5,15 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The center inDANCEive event</title>
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <!-- <script type="module" src="./src/components/my-element.ts"></script>
+    <script type="module" src="./src/components/lit-nav.ts"></script> -->
+    <script type="module" src="./src/components/hero-image.ts"></script>
+    <script type="module" src="./src/components/lit-nav.ts"></script>
   </head>
   <body>
-    <div id="app"></div>
+    <lit-nav></lit-nav>
+    <hero-image id="home"></hero-image>
     <div class="gradientWrapper">
       <div class="contentWrapper">
         <h1>K-POP IN<span>DANCE</span>IVE 2024</h1>
@@ -45,7 +50,7 @@
       <div class="noiseFilter"></div>
     </div>
     <!-- Choreographers should be wrapped in a sweparate div that contains (h2, div with class flexWrapper) -->
-    <h2>Choreographers</h2>
+    <h2 id="choreographers">Choreographers</h2>
     <div class="flexWrapper">
       <div class="choreographer">
         <div class="choreographer-image">
@@ -139,7 +144,7 @@
       </div>
     </div>
     <div class="program">
-      <h2>Program</h2>
+      <h2 id="info">Program</h2>
       <div class="informationProgram">
         <ul class="informationList">
           <li>3 дни K-pop madness</li>
@@ -152,7 +157,7 @@
         </ul>
       </div>
     </div>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <p class="footerP">
         <!-- links on hover should have underline -->
         <!-- Links should be white color -->
@@ -172,7 +177,5 @@
         Телефон:<strong><span class="underlined"> 0700 300 57</span></strong>
       </p>
     </footer>
-
-    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
