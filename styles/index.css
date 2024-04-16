@@ -51,7 +51,7 @@ h1 {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -129,18 +129,44 @@ p {
   text-decoration: underline;
 }
 
-.program {
-  /* padding: 50px; */
+.schedule {
+  padding: 30px;
+  color: #353394;
+  
+  h2,h3 {
+    text-align: left;
+    margin: 0;
+    font-family: "Orbitron", sans-serif;
+  }
+
+  p {
+    font-family: "Orbitron", sans-serif;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .day {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .bgEnglishMixup {
+    font-family: sans-serif;
+  }
 }
 
-.informationProgram {
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
+.scheduleHeadingWrapper {
+  margin-bottom: 35px;
+  span {
+    font-size: 20px;
+    font-family: "Orbitron", sans-serif;
+  }
 
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 6px 8px 30px 0px #00000070;
+  h3 {
+    font-weight: bold;
+  }
 }
 
 .footer {
@@ -161,13 +187,4 @@ p {
       text-decoration: none;
     }
   }
-}
-
-.footerP > a:visited {
-  /* color: white; */
-}
-
-.footerP > a:hover {
-  /* text-decoration: underline; */
-  /* color: blue; */
 }

@@ -1,108 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The center inDANCEive event</title>
-    <link rel="stylesheet" href="/styles/index.css" />
-    <script type="module" src="./src/components/hero-image.ts"></script>
-    <script type="module" src="./src/components/lit-nav.ts"></script>
-    <script type="module" src="./src/components/choreographers-list.ts"></script>
-  </head>
-  <body>
-    <lit-nav></lit-nav>
-    <hero-image id="home"></hero-image>
-    <div class="gradientWrapper">
-      <div class="contentWrapper">
-        <h1>K-POP IN<b>DANCE</b>IVE 2024</h1>
-        <p>
-          Първият специализиран К-pop Dance Intensive в България. Във формат и
-          мащаб, който заслужаваме. През юли, на морето.
-        </p>
-        <p>Напълнихме го с класове, дейности и събития. И топ хореографи.</p>
-        <p>
-          За да получим професионална методика за учене на танци. По начин,
-          който се доближава до начина, по който нашите идоли разучават
-          хореографиите си.
-        </p>
-        <p>Ще учим техника, музикалност, процес.</p>
-        <p>
-          Разкодиране на движения и много hint-ове за по-лесно заучаване на
-          всяка нова хореография.
-        </p>
-        <ul class="informationList">
-          <li>3 дни K-pop madness</li>
-          <li>6 цветни хореографа</li>
-          <li>🍭12 различни класа</li>
-          <li>Шоукейс вечер на професионална сцена</li>
-          <li>🔷Random K-pop Dance навън, в сърцето на Варна</li>
-          <li>Кино вечер за любими танцови видеоклипове с Q&A</li>
-          <li>Специално организирана вечеря в корейски ресторант</li>
-        </ul>
-        <p>
-          Всичко това на K-pop Indanceive 2024, в разгара на лятото, в центърана
-          Варна.
-        </p>
-      </div>
-      <div class="noiseFilter"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The center inDANCEive event</title>
+  <link rel="stylesheet" href="/styles/index.css" />
+  <script type="module" src="./src/components/hero-image.ts"></script>
+  <script type="module" src="./src/components/lit-nav.ts"></script>
+  <script type="module" src="./src/components/choreographers-list.ts"></script>
+</head>
+
+<body>
+  <lit-nav></lit-nav>
+  <hero-image id="home"></hero-image>
+  <div class="gradientWrapper">
+    <div class="contentWrapper">
+      <h1>K-POP IN<b>DANCE</b>IVE 2024</h1>
+      <p>
+        Първият специализиран К-pop Dance Intensive в България. Във формат и
+        мащаб, който заслужаваме. През юли, на морето.
+      </p>
+      <p>Напълнихме го с класове, дейности и събития. И топ хореографи.</p>
+      <p>
+        За да получим професионална методика за учене на танци. По начин,
+        който се доближава до начина, по който нашите идоли разучават
+        хореографиите си.
+      </p>
+      <p>Ще учим техника, музикалност, процес.</p>
+      <p>
+        Разкодиране на движения и много hint-ове за по-лесно заучаване на
+        всяка нова хореография.
+      </p>
+      <ul class="informationList">
+        <li>3 дни K-pop madness</li>
+        <li>6 цветни хореографа</li>
+        <li>🍭12 различни класа</li>
+        <li>Шоукейс вечер на професионална сцена</li>
+        <li>🔷Random K-pop Dance навън, в сърцето на Варна</li>
+        <li>Кино вечер за любими танцови видеоклипове с Q&A</li>
+        <li>Специално организирана вечеря в корейски ресторант</li>
+      </ul>
+      <p>
+        Всичко това на K-pop Indanceive 2024, в разгара на лятото, в центърана
+        Варна.
+      </p>
     </div>
-    <h2 id="choreographers" class="choreographersTitle">Choreographers</h2>
-    <choreographers-list></choreographers-list>
-    <div class="program">
+    <div class="noiseFilter"></div>
+  </div>
+  <h2 id="choreographers" class="choreographersTitle">Choreographers</h2>
+  <choreographers-list></choreographers-list>
+  <div class="schedule">
+    <div class="scheduleHeadingWrapper">
       <h2 id="info">Schedule</h2>
-      <div class="informationProgram">
-        <ul class="informationList">
-          <h2>ГРАФИК K-POP INDANCEIVE:</h2>
-          <h3>26-28 юли 2024, гр. Варна</h3>
-          <h3>Ден 1 - 26.07.2024</h3>
-          <p>9:00-10:15 - Клас 1</p>
-          <p>- 15 Мин почивка</p>
-          <p>10:30-11:45 Клас 2</p>
-          <p>- 1 час почивка</p>
-          <p>13:00-14:15 Клас 3</p>
-          <p>- 15 Мин почивка</p>
-          <p>14:15-15:30 Клас 4</p>
-          <p>
-            19:00 Ден 1 Вечерна активност - Кино вечер за любими танцови
-            видеоклипове с Q&A - хореографи видеа (любима
-            хореография / performance / група)
-          </p>
-          <h3>Ден 2 - 27.07.2024</h3>
-          <p>9:00-10:15 - Клас 1</p>
-          <p>- 15 Мин почивка</p>
-          <p>10:30-11:45 Клас 2</p>
-          <p>- 1 час почивка</p>
-          <p>13:00-14:15 Клас 3</p>
-          <p>- 15 Мин почивка</p>
-          <p>14:15-15:30 Клас 4</p>
-          <p>19:00 Ден 2 Вечерна активност - Showcase performance вечер</p>
-          <h3>Ден 3 - 28.07.2024</h3>
-          <p>9:00-10:15 - Клас 1</p>
-          <p>- 15 Мин почивка</p>
-          <p>10:30-11:45 Клас 2</p>
-          <p>- 1 час почивка</p>
-          <p>13:00-14:15 Клас 3</p>
-          <p>- 15 Мин почивка</p>
-          <p>14:15-15:30 Клас 4</p>
-          <p>19:00 Ден 3 Вечерна активност - Random K-pop Dance</p>
-        </ul>
-      </div>
+      <span>гр. Варна</span>
+      <h3>26-28 юли 2024</h3>
     </div>
-    <footer class="footer" id="contacts">
-      <p>
-        Instagram:
-        <a href="https://www.instagram.com/thecenterbg/?hl=bg">@inDANCEive</a>
-      </p>
-      <p>
-        Facebook:
-        <a href="https://www.facebook.com/Street.Dance.School.The.Center/?locale=bg_BG">
-          @inDANCEiveFacebookPage
-        </a>
-      </p>
-      <p>
-        Tel: <span class="underlined">0700 300 57</span>
-      </p>
-    </footer>
-  </body>
+    <h3 class="day">Ден 1 - 26.07.2024</h3>
+    <p><b>9:00-10:15</b> - Клас 1</p>
+    <p>- 15 Мин почивка</p>
+    <p><b>10:30-11:45</b> Клас 2</p>
+    <p>- 1 час почивка</p>
+    <p><b>13:00-14:15</b> Клас 3</p>
+    <p>- 15 Мин почивка</p>
+    <p><b>14:15-15:30</b> Клас 4</p>
+    <p>
+      <b>19:00</b> Ден 1 Вечерна активност - Кино вечер за любими танцови
+      видеоклипове с Q&A - хореографи видеа (любима
+      хореография/<span class="bgEnglishMixup">performance</span>/група)
+    </p>
+  </div>
+  <footer class="footer" id="contacts">
+    <p>
+      Instagram:
+      <a href="https://www.instagram.com/thecenterbg/?hl=bg">@inDANCEive</a>
+    </p>
+    <p>
+      Facebook:
+      <a href="https://www.facebook.com/Street.Dance.School.The.Center/?locale=bg_BG">
+        @inDANCEiveFacebookPage
+      </a>
+    </p>
+    <p>
+      Tel: <span class="underlined">0700 300 57</span>
+    </p>
+  </footer>
+</body>
+
 </html>
