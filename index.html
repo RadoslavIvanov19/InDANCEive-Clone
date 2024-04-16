@@ -6,17 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The center inDANCEive event</title>
     <link rel="stylesheet" href="/styles/index.css" />
-    <!-- <script type="module" src="./src/components/my-element.ts"></script>
-    <script type="module" src="./src/components/lit-nav.ts"></script> -->
     <script type="module" src="./src/components/hero-image.ts"></script>
     <script type="module" src="./src/components/lit-nav.ts"></script>
+    <script type="module" src="./src/components/choreographers-list.ts"></script>
   </head>
   <body>
     <lit-nav></lit-nav>
     <hero-image id="home"></hero-image>
     <div class="gradientWrapper">
       <div class="contentWrapper">
-        <h1>K-POP IN<span>DANCE</span>IVE 2024</h1>
+        <h1>K-POP IN<b>DANCE</b>IVE 2024</h1>
         <p>
           Първият специализиран К-pop Dance Intensive в България. Във формат и
           мащаб, който заслужаваме. През юли, на морето.
@@ -32,7 +31,6 @@
           Разкодиране на движения и много hint-ове за по-лесно заучаване на
           всяка нова хореография.
         </p>
-        <!-- better name -->
         <ul class="informationList">
           <li>3 дни K-pop madness</li>
           <li>6 цветни хореографа</li>
@@ -49,99 +47,10 @@
       </div>
       <div class="noiseFilter"></div>
     </div>
-    <!-- Choreographers should be wrapped in a sweparate div that contains (h2, div with class flexWrapper) -->
-    <h2 id="choreographers">Choreographers</h2>
-    <div class="flexWrapper">
-      <div class="choreographer">
-        <div class="choreographer-image">
-          <img src="MichaelScott.jpg" alt="Person Image" />
-          <div class="choreographer-info">
-            <h2>Michael Scott The Scarnn</h2>
-            <p>
-              <a
-                href="https://www.facebook.com/Street.Dance.School.The.Center/?locale=bg_BG"
-                >@StraigthOutOf</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="choreographer">
-        <div class="choreographer-image">
-          <img src="MichaelScott.jpg" alt="Person Image" />
-          <div class="choreographer-info">
-            <h2>Dwigth Schrute The Farm Owner</h2>
-            <p>
-              <a
-                href="https://www.facebook.com/Street.Dance.School.The.Center/?locale=bg_BG"
-              >
-                @stopItJim
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="choreographer">
-        <div class="choreographer-image">
-          <img src="MichaelScott.jpg" alt="Person Image" />
-        </div>
-        <div class="choreographer-info">
-          <h2>Jimothy The Prankster of Dwith</h2>
-          <p>
-            <a href="https://www.facebook.com/Street.Dance.School.The.Center/?locale=bg_BG">
-              @PrankingDwigth
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="choreographer">
-      <div class="choreographer-image">
-        <img src="MichaelScott.jpg" alt="Person Image" />
-      </div>
-      <div class="choreographer-info">
-        <h2>Pam Mistress of the Lord</h2>
-        <!-- this should be a link -->
-        <p>
-          <a
-            href="https://www.facebook.com/Street.Dance.School.The.Center/?locale=bg_BG"
-            >@Receptionist
-          </a>
-        </p>
-      </div>
-    </div>
-    <div class="choreographer">
-      <div class="choreographer-image">
-        <img src="MichaelScott.jpg" alt="Person Image" />
-      </div>
-      <div class="choreographer-info">
-        <h2>Andy Bernard The Guitar Hero</h2>
-        <p>
-          <a
-            href="https://www.facebook.com/Street.Dance.School.The.Center/?locale=bg_BG"
-          >
-            @GuitarMaster69
-          </a>
-        </p>
-      </div>
-    </div>
-    <div class="choreographer">
-      <div class="choreographer-image">
-        <img src="MichaelScott.jpg" alt="Person Image" />
-      </div>
-      <div class="choreographer-info">
-        <h2>Oscar Martines - El Hombre</h2>
-        <p>
-          <a
-            href="https://www.facebook.com/Street.Dance.School.The.Center/?locale=bg_BG"
-          >
-            @DidYouAssumeMyGender
-          </a>
-        </p>
-      </div>
-    </div>
+    <h2 id="choreographers" class="choreographersTitle">Choreographers</h2>
+    <choreographers-list></choreographers-list>
     <div class="program">
-      <h2 id="info">Program</h2>
+      <h2 id="info">Schedule</h2>
       <div class="informationProgram">
         <ul class="informationList">
           <h2>ГРАФИК K-POP INDANCEIVE:</h2>
@@ -157,7 +66,7 @@
           <p>
             19:00 Ден 1 Вечерна активност - Кино вечер за любими танцови
             видеоклипове с Q&A - хореографи видеа (любима
-            хореография/performance/група)
+            хореография / performance / група)
           </p>
           <h3>Ден 2 - 27.07.2024</h3>
           <p>9:00-10:15 - Клас 1</p>
@@ -181,23 +90,18 @@
       </div>
     </div>
     <footer class="footer" id="contacts">
-      <p class="footerP">
-        <!-- links on hover should have underline -->
-        <!-- Links should be white color -->
-        <!-- color on link  -->
+      <p>
         Instagram:
-        <a href="https://www.instagram.com/thecenterbg/?hl=bg">thecenter</a>
+        <a href="https://www.instagram.com/thecenterbg/?hl=bg">@inDANCEive</a>
       </p>
-      <p class="footerP">
+      <p>
         Facebook:
-        <a
-          href="https://www.facebook.com/Street.Dance.School.The.Center/?locale=bg_BG"
-        >
-          TheCenter
+        <a href="https://www.facebook.com/Street.Dance.School.The.Center/?locale=bg_BG">
+          @inDANCEiveFacebookPage
         </a>
       </p>
-      <p class="footerP">
-        Телефон:<strong><span class="underlined"> 0700 300 57</span></strong>
+      <p>
+        Tel: <span class="underlined">0700 300 57</span>
       </p>
     </footer>
   </body>

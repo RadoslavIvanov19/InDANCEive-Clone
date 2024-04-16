@@ -5,27 +5,25 @@ import cross from "/cross.svg";
 
 const navigationList = [
   {
-    title: 'начало',
+    title: '- home',
     url: '#home',
   },
   {
-    title: 'хореографи',
+    title: '- choreographers',
     url: '#choreographers',
   },
   {
-    title: 'график',
+    title: '- schedule',
     url: '#info',
   },
   {
-    title: 'контакти',
+    title: '- contacts',
     url: '#contacts',
   },
 ];
 
 const isMobile = () => {
   if (window.innerWidth > 769) {
-    console.log('wa');
-    
     return false;
   }
   return true;
@@ -34,13 +32,12 @@ const isMobile = () => {
 @customElement('lit-nav')
 export class Navigation extends LitElement {
   static styles = css`
-    /* ::slotted(*) { font-family: 'Orbitron'; } */
-
     .navigationWrapper {
       background: white;
       position: fixed;
       top: 0;
       width: 100%;
+      box-shadow: 6px 8px 30px rgba(0, 0, 0, 0.2);
       z-index: 10;
     }
 
@@ -68,8 +65,9 @@ export class Navigation extends LitElement {
     }
 
     a {
-      font-family: 'Orbitron', sans-serif;
+      font-family: "ChakraPetch", sans-serif;
       font-size: 25px;
+      font-weight: bold;
       color: #353394;
       text-decoration: none;
       padding: 10px;

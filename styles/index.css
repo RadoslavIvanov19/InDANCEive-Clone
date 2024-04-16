@@ -14,16 +14,25 @@
   font-style: bold;
 }
 
+@font-face {
+  font-family: "ChakraPetch";
+  src: url("../fonts/ChakraPetch/ChakraPetch-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ChakraPetch";
+  src: url("../fonts/ChakraPetch/ChakraPetch-Bold.ttf");
+  font-weight: 600;
+  font-style: bold;
+}
+
 * { touch-action: manipulation; }
 
 html {
   scroll-behavior: smooth;
 }
-
-/* header img {
-  max-width: 100%;
-  height: auto;
-} */
 
 h1,
 h2,
@@ -33,14 +42,22 @@ h5 {
   font-family: "Orbitron", sans-serif;
   font-weight: 400;
   text-align: center;
+  color: #353394;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 40px;
+  margin-bottom: 50px;
 }
 
-h1 span {
+h2 {
+  font-size: 28px;
   font-weight: 600;
+  text-transform: uppercase;
+}
+
+.choreographersTitle {
+  margin-top: 60px;
 }
 
 .informationList {
@@ -57,10 +74,9 @@ li {
 } */
 
 .gradientWrapper {
-  /* word-wrap: break-word; */
   position: relative;
   margin-top: -5px;
-  padding: 50px;
+  padding: 50px 15px;
   background: radial-gradient(
       at top right,
       rgb(249, 210, 228, 0.7) 0%,
@@ -89,14 +105,15 @@ li {
 }
 
 .contentWrapper {
-  /* font-size: 32px; */
-  padding: 15px;
+  padding: 20px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 6px 8px 30px 0px #00000070;
   color: #353394;
-  /* margin-left: auto;
-  margin-right: auto; */
+
+  ul {
+    padding: 0 0 0 20px;
+  }
 }
 
 body {
@@ -104,8 +121,6 @@ body {
 }
 
 p {
-  /* text-align: left; */
-  font-size: 24px;
   font-weight: 400;
   line-height: 27.3px;
 }
@@ -114,73 +129,8 @@ p {
   text-decoration: underline;
 }
 
-.flexWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media (min-width: 768px) {
-  .flexWrapper {
-    max-width: 100%;
-    flex-flow: row wrap;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-around;
-    padding: 30px;
-    gap: 60px;
-  }
-}
-
-.choreographer {
-  width: 360.6px;
-  height: 580px;
-  max-width: 100%;
-  max-height: 100%;
-  position: relative;
-  margin: 30px;
-  border-radius: 5px;
-  background-color: white;
-  box-shadow: 6px 8px 30px 0px #00000070;
-}
-
-.choreographer-info > a {
-  text-decoration: none;
-  color: #353394;
-}
-
-.choreographer-info > a:hover {
-  text-decoration: underline;
-  color: blue;
-}
-.choreographer-info > a:link:visited {
-  color: #353394;
-}
-
-.choreographer-image img {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  border-radius: 5px 5px 5px 0px;
-}
-
-.choreographer-info {
-  padding: 10px;
-  color: #353394;
-  text-align: center;
-}
-
-.choreographer-info h2 {
-  margin-top: 10px;
-}
-
-.choreographer-info p {
-  margin: 5px 0;
-}
-
 .program {
-  padding: 50px;
+  /* padding: 50px; */
 }
 
 .informationProgram {
@@ -194,26 +144,30 @@ p {
 }
 
 .footer {
-  padding: 50px;
+  padding: 50px 30px 90px 30px;
   background-color: #353394;
-}
 
-.footerP p {
-  padding: 150px;
-}
-.footerP {
-  font-weight: bold;
-  display: block;
-  text-decoration: none;
-  color: white;
-  margin: 0px;
+  p {
+    display: block;
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    text-decoration: none;
+    color: white;
+    /* margin: ; */
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
 }
 
 .footerP > a:visited {
-  color: white;
+  /* color: white; */
 }
 
 .footerP > a:hover {
-  text-decoration: underline;
-  color: blue;
+  /* text-decoration: underline; */
+  /* color: blue; */
 }
