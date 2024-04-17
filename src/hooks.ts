@@ -1,0 +1,1 @@
+export const isTabletOrSmaller = () => !(window.innerWidth > 769);

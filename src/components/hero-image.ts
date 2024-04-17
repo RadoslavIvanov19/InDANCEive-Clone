@@ -5,13 +5,13 @@ import mobile from "/MobileHeader.jpg";
 import { LitElement, css, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
-const mobileMaxWidth = 376;
+const mobileMaxWidth = 425;
 const tabletMaxWidth = 769;
 
 const getDefaultHeader = () => {
-  if (window.innerWidth < 376) {
+  if (window.innerWidth < mobileMaxWidth) {
     return mobile;
-  } else if (window.innerWidth < 769 && window.innerWidth < 376) {
+  } else if (window.innerWidth < tabletMaxWidth && window.innerWidth < mobileMaxWidth) {
     return tablet;
   }
   return desktop;
@@ -21,6 +21,7 @@ const getDefaultHeader = () => {
 export class MyElement extends LitElement {
   static styles = css`
     header img {
+      width: 100%;
       max-width: 100%;
       height: auto;
       margin-top: 60px;

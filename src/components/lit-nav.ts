@@ -2,6 +2,7 @@ import { LitElement, css, html } from 'lit'
 import { customElement, state } from 'lit/decorators.js'
 import hamburger from "/hamburger.svg";
 import cross from "/cross.svg";
+import { isTabletOrSmaller } from '../hooks';
 
 const navigationList = [
   {
@@ -21,13 +22,6 @@ const navigationList = [
     url: '#contacts',
   },
 ];
-
-const isMobile = () => {
-  if (window.innerWidth > 769) {
-    return false;
-  }
-  return true;
-}
 
 @customElement('lit-nav')
 export class Navigation extends LitElement {
@@ -49,6 +43,10 @@ export class Navigation extends LitElement {
       .navigation {
         display: block;
         padding: 20px;
+
+        @media (min-width: 768px) {
+          padding-left: 40px
+        }
       }
     }
 
@@ -71,6 +69,11 @@ export class Navigation extends LitElement {
       color: #353394;
       text-decoration: none;
       padding: 10px;
+      transition: 0.1s;
+
+      &:hover {
+        color: #DD5FA4;
+      }
     }
 
     .navigation.visible {
@@ -82,24 +85,26 @@ export class Navigation extends LitElement {
       border: none;
     }
 
-    /* @media (min-width: 768px) {
-
-    } */
+    @media (min-width: 768px) {
+      a {
+        margin-left: 15px;
+      }
+    }
   `;
 
   @state() isVisible: boolean = false;
-  @state() isMobileState: boolean = isMobile();
+  @state() isMobileState: boolean = isTabletOrSmaller();
 
   connectedCallback() {
     super.connectedCallback();
     window.addEventListener('resize', () => {
-      this.isMobileState = isMobile();
+      this.isMobileState = isTabletOrSmaller();
     });
   };
 
   disconnectedCallback() {
     window.removeEventListener('resize', () => {
-      this.isMobileState = isMobile();
+      this.isMobileState = isTabletOrSmaller();
     });
     super.disconnectedCallback();
   };
@@ -111,7 +116,6 @@ export class Navigation extends LitElement {
   private toggleNav() {
     this.toggleNavVisibility();
   };
-
 
   render() {
     return html`

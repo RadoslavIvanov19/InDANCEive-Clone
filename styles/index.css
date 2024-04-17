@@ -50,12 +50,27 @@ h5 {
 h1 {
   font-size: 40px;
   margin-bottom: 50px;
+  word-break: break-word;
+
+  @media (min-width: 426px) {
+    font-size: 50px;
+    max-width: 400px;
+    margin: 20px auto 65px auto;
+  }
+  @media (min-width: 768px) {
+    font-size: 65px;
+    max-width: 600px;
+  }
 }
 
 h2 {
   font-size: 30px;
   font-weight: 600;
   text-transform: uppercase;
+
+  @media (min-width: 426px) {
+    font-size: 40px;
+  }
 }
 
 .choreographersTitle {
@@ -65,15 +80,12 @@ h2 {
 .informationList {
   font-size: 24px;
 }
+
 p,
 li {
   font-size: 16px;
   font-family: "ChakraPetch", sans-serif;
 }
-
-/* .informationList {
-  font-size: 32px;
-} */
 
 .gradientWrapper {
   position: relative;
@@ -104,6 +116,15 @@ li {
     opacity: 0.4;
     z-index: -1;
   }
+
+  @media (min-width: 426px) {
+    padding: 100px 50px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 100px 60px;
+    /* padding: 100px 100px; */
+  }
 }
 
 .contentWrapper {
@@ -115,6 +136,12 @@ li {
 
   ul {
     padding: 0 0 0 20px;
+  }
+
+  @media (min-width: 426px) {
+    padding: 40px 50px;
+    margin: 0 auto;
+    max-width: 650px;
   }
 }
 
@@ -134,20 +161,19 @@ p {
 .schedule {
   padding: 30px;
   color: #353394;
+  text-align: center;
 
   h2,
   h3 {
-    text-align: left;
     margin: 0;
     font-family: "Orbitron", sans-serif;
   }
 
   p {
     font-family: "Orbitron", sans-serif;
-  }
-
-  h2 {
-    font-size: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .day {
@@ -157,6 +183,15 @@ p {
 
   .bgEnglishMixup {
     font-family: sans-serif;
+  }
+
+  .dash {
+    margin: 30px auto;
+    font-weight: bold;
+  }
+
+  @media (min-width: 426px) {
+    padding: 100px 50px;
   }
 }
 
@@ -170,10 +205,14 @@ p {
   h3 {
     font-weight: bold;
   }
+
+  @media (min-width: 426px) {
+    margin-bottom: 90px;
+  }
 }
 
 .footer {
-  padding: 50px 30px 90px 37px; /* 30px ако трябва да е като със schedule 37 ако е същото като флекс рапъра*/
+  padding: 50px 30px 90px 37px;
   background-color: #353394;
 
   p {
@@ -183,11 +222,22 @@ p {
     font-size: 23px;
     text-decoration: none;
     color: white;
-    /* margin: ; */
 
     a {
       color: #ffffff;
       text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media (min-width: 426px) {
+    padding: 90px 50px 90px 70px;
+
+    p {
+      font-size: 30px;
     }
   }
 }
