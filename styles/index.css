@@ -28,7 +28,9 @@
   font-style: bold;
 }
 
-* { touch-action: manipulation; }
+* {
+  touch-action: manipulation;
+}
 
 html {
   scroll-behavior: smooth;
@@ -66,7 +68,7 @@ h2 {
 p,
 li {
   font-size: 16px;
-  font-family: 'ChakraPetch', sans-serif;
+  font-family: "ChakraPetch", sans-serif;
 }
 
 /* .informationList {
@@ -132,8 +134,9 @@ p {
 .schedule {
   padding: 30px;
   color: #353394;
-  
-  h2,h3 {
+
+  h2,
+  h3 {
     text-align: left;
     margin: 0;
     font-family: "Orbitron", sans-serif;
@@ -170,7 +173,7 @@ p {
 }
 
 .footer {
-  padding: 50px 30px 90px 30px;
+  padding: 50px 30px 90px 37px; /* 30px ако трябва да е като със schedule 37 ако е същото като флекс рапъра*/
   background-color: #353394;
 
   p {
