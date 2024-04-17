@@ -1,46 +1,46 @@
-import { LitElement, css, html } from 'lit'
-import { customElement } from 'lit/decorators.js'
+import { LitElement, css, html } from "lit";
+import { customElement } from "lit/decorators.js";
 
 const choreographersList = [
   {
-    personName: 'Michael Scott Michels Genson',
-    url: 'https://www.facebook.com/Street.Dance.School.The.Center/?locale=bg_BG',
-    urlTitle: '@theTitleName',
-    img: 'MichaelScott.jpg',
+    personName: "Michael Scott Michels Genson",
+    url: "https://www.facebook.com/Street.Dance.School.The.Center/?locale=bg_BG",
+    urlTitle: "@theTitleName",
+    img: "questionMark.svg",
   },
   {
-    personName: 'Obamasim Teodoris',
-    url: '#',
-    urlTitle: '@theTitleName',
-    img: 'MichaelScott.jpg',
+    personName: "Obamasim Teodoris",
+    url: "#",
+    urlTitle: "@theTitleName",
+    img: "questionMark.svg",
   },
   {
-    personName: 'Zing the Zang',
-    url: '#',
-    urlTitle: '@theTitleName',
-    img: 'questionMark.svg',
+    personName: "Zing the Zang",
+    url: "#",
+    urlTitle: "@theTitleName",
+    img: "questionMark.svg",
   },
   {
-    personName: '.....',
-    url: '#',
-    urlTitle: '',
-    img: 'questionMark.svg',
+    personName: ".....",
+    url: "#",
+    urlTitle: "",
+    img: "questionMark.svg",
   },
   {
-    personName: '.....',
-    url: '#',
-    urlTitle: '',
-    img: 'questionMark.svg',
+    personName: ".....",
+    url: "#",
+    urlTitle: "",
+    img: "questionMark.svg",
   },
   {
-    personName: '.....',
-    url: '#',
-    urlTitle: '',
-    img: 'questionMark.svg',
+    personName: ".....",
+    url: "#",
+    urlTitle: "",
+    img: "questionMark.svg",
   },
 ];
 
-@customElement('choreographers-list')
+@customElement("choreographers-list")
 export class ChoreographersList extends LitElement {
   static styles = css`
     .flexWrapper {
@@ -55,13 +55,13 @@ export class ChoreographersList extends LitElement {
       border-radius: 5px;
       background-color: white;
       box-shadow: 6px 8px 30px rgba(0, 0, 0, 0.25);
-      max-width: 240px
+      max-width: 240px;
     }
 
     .choreographer-image {
-      height:  240px;
+      height: 240px;
       width: 240px;
-      border-radius: 5px 5px 0 0; 
+      border-radius: 5px 5px 0 0;
     }
 
     .choreographer-info {
@@ -73,17 +73,17 @@ export class ChoreographersList extends LitElement {
       display: flex;
       flex-direction: row;
       align-items: center;
-      
+
       h2 {
         margin-bottom: 10px;
       }
-      
+
       span {
         font-family: "ChakraPetch", sans-serif;
         font-size: 20px;
       }
 
-      a { 
+      a {
         margin: 0 auto;
       }
     }
@@ -122,25 +122,29 @@ export class ChoreographersList extends LitElement {
   render() {
     return html`
       <div class="flexWrapper">
-        ${choreographersList.map(({ personName, url, urlTitle, img }) => html`
-          <div class="choreographer">
-            <div class="choreographer-image" style='background: url(${img}) center no-repeat;'>
+        ${choreographersList.map(
+          ({ personName, url, urlTitle, img }) => html`
+            <div class="choreographer">
+              <div
+                class="choreographer-image"
+                style="background: url(${img}) center no-repeat;"
+              ></div>
+              <div class="choreographer-info">
+                <a href=${url}>
+                  <h2>${personName}</h2>
+                  <span>${urlTitle}</span>
+                </a>
+              </div>
             </div>
-            <div class="choreographer-info">
-              <a href=${url}>
-                <h2>${personName}</h2>
-                <span>${urlTitle}</span>
-              </a>
-            </div>
-          </div>
-        `)}
+          `
+        )}
       </div>
-    `
-  };
-};
+    `;
+  }
+}
 
 declare global {
   interface HTMLElementTagNameMap {
-    'choreographers-list': ChoreographersList
+    "choreographers-list": ChoreographersList;
   }
-};
+}
