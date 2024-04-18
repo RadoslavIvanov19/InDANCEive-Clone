@@ -3,21 +3,21 @@ import { customElement } from "lit/decorators.js";
 
 const choreographersList = [
   {
-    personName: "Michael Scott Michels Genson",
-    url: "https://www.facebook.com/Street.Dance.School.The.Center/?locale=bg_BG",
-    urlTitle: "@theTitleName",
+    personName: ".....",
+    url: "#",
+    urlTitle: "",
     img: "questionMark.svg",
   },
   {
-    personName: "Obamasim Teodoris",
+    personName: ".....",
     url: "#",
-    urlTitle: "@theTitleName",
+    urlTitle: "",
     img: "questionMark.svg",
   },
   {
-    personName: "Zing the Zang",
+    personName: ".....",
     url: "#",
-    urlTitle: "@theTitleName",
+    urlTitle: "",
     img: "questionMark.svg",
   },
   {
