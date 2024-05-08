@@ -3,10 +3,10 @@ import { customElement } from "lit/decorators.js";
 
 const choreographersList = [
   {
-    personName: ".....",
-    url: "#",
-    urlTitle: "",
-    img: "questionMark.svg",
+    personName: "BILYANA TSOLOVA",
+    url: "https://www.instagram.com/bibliq/",
+    urlTitle: "@bibliq",
+    img: "BILYANA-TSOLOVA.jpg",
   },
   {
     personName: ".....",
@@ -127,7 +127,7 @@ export class ChoreographersList extends LitElement {
             <div class="choreographer">
               <div
                 class="choreographer-image"
-                style="background: url(${img}) center no-repeat;"
+                style="background: url(${img}) center no-repeat; background-size: contain;"
               ></div>
               <div class="choreographer-info">
                 <a href=${url}>
