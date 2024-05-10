@@ -9,10 +9,10 @@ const choreographersList = [
     img: "BILYANA-TSOLOVA.jpg",
   },
   {
-    personName: ".....",
-    url: "#",
-    urlTitle: "",
-    img: "questionMark.svg",
+    personName: "VANYA SANTEVA",
+    url: "https://www.instagram.com/nyanishh",
+    urlTitle: "@nyanishh",
+    img: "VANYA-SANTEVA.jpg",
   },
   {
     personName: ".....",
