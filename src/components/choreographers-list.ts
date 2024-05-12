@@ -15,10 +15,10 @@ const choreographersList = [
     img: "VANYA-SANTEVA.jpg",
   },
   {
-    personName: ".....",
-    url: "#",
-    urlTitle: "",
-    img: "questionMark.svg",
+    personName: "MARIA-YOANNA TOTLYAKOVA",
+    url: "https://www.instagram.com/_totlyakova",
+    urlTitle: "@_totlyakova",
+    img: "MARIA-YOANNA-TOTLYAKOVA.jpg",
   },
   {
     personName: ".....",
