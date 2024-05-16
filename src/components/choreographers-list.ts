@@ -21,10 +21,10 @@ const choreographersList = [
     img: "MARIA-YOANNA-TOTLYAKOVA.jpg",
   },
   {
-    personName: ".....",
-    url: "#",
-    urlTitle: "",
-    img: "questionMark.svg",
+    personName: "MARIANA STETSENKO",
+    url: "https://www.instagram.com/maaaariannaaaa",
+    urlTitle: "@maaaariannaaaa",
+    img: "MARIANA-STETSENKO.jpg",
   },
   {
     personName: ".....",
