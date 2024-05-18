@@ -27,10 +27,10 @@ const choreographersList = [
     img: "MARIANA-STETSENKO.jpg",
   },
   {
-    personName: ".....",
-    url: "#",
-    urlTitle: "",
-    img: "questionMark.svg",
+    personName: "ALEKSANDRA SIMEONOVA",
+    url: "https://www.instagram.com/julto.drakonche",
+    urlTitle: "@julto.drakonche",
+    img: "ALEKSANDRA-SIMEONOVA.jpg",
   },
   {
     personName: ".....",
