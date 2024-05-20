@@ -33,10 +33,10 @@ const choreographersList = [
     img: "ALEKSANDRA-SIMEONOVA.jpg",
   },
   {
-    personName: ".....",
-    url: "#",
-    urlTitle: "",
-    img: "questionMark.svg",
+    personName: "SVETLIN VALKOV",
+    url: "https://www.instagram.com/svxt_txc",
+    urlTitle: "@svxt_txc",
+    img: "SVETLIN-VALKOV.jpg",
   },
 ];
 
