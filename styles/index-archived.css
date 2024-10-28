@@ -44,7 +44,7 @@ h5 {
   font-family: "Orbitron", sans-serif;
   font-weight: 400;
   text-align: center;
-  color: white;
+  color: #353394;
 }
 
 h1 {
@@ -73,13 +73,13 @@ h2 {
   }
 }
 
-/* .choreographersTitle {
+.choreographersTitle {
   margin-top: 60px;
 }
 
 .informationList {
   font-size: 24px;
-} */
+}
 
 p,
 li {
@@ -87,7 +87,7 @@ li {
   font-family: "ChakraPetch", sans-serif;
 }
 
-/* .gradientWrapper {
+.gradientWrapper {
   position: relative;
   margin-top: -5px;
   padding: 50px 15px;
@@ -123,10 +123,11 @@ li {
 
   @media (min-width: 768px) {
     padding: 100px 60px;
+    /* padding: 100px 100px; */
   }
-} */
+}
 
-/* .contentWrapper {
+.contentWrapper {
   padding: 20px;
   background-color: white;
   border-radius: 5px;
@@ -142,7 +143,7 @@ li {
     margin: 0 auto;
     max-width: 650px;
   }
-} */
+}
 
 body {
   margin: 0;
@@ -153,7 +154,7 @@ p {
   line-height: 27.3px;
 }
 
-/* .underlined {
+.underlined {
   text-decoration: underline;
 }
 
@@ -273,30 +274,5 @@ p {
 
   @media (min-width: 426px) {
     padding: 150px 50px 150px 50px;
-  }
-} */
-
-
-
-/* Above stylings are archived but will be reused for new web page */
-
-.loading-wrapper {
-  background: url("../public/vol-two/loading/background-min.jpg");
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  h1 {
-    margin: 0;
-    text-align: center;
-    font-weight: 700;
-    font-size: 85px;
-  }
-
-  h2 {
-    margin: 0;
   }
 }
