@@ -1,6 +1,6 @@
-import desktop from "/DesktopHeader.jpg"
-import tablet from "/TabletHeader.jpg";
-import mobile from "/MobileHeader.jpg";
+import desktop from "../../public/vol-one/DesktopHeader.jpg"
+import tablet from "../../public/vol-one/TabletHeader.jpg";
+import mobile from "../../public/vol-one/MobileHeader.jpg";
 
 import { LitElement, css, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'

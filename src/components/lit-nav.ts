@@ -1,7 +1,7 @@
 import { LitElement, css, html } from 'lit'
 import { customElement, state } from 'lit/decorators.js'
-import hamburger from "/hamburger.svg";
-import cross from "/cross.svg";
+import hamburger from "../../public/vol-one/hamburger.svg";
+import cross from "../../public/vol-one/cross.svg";
 import { isTabletOrSmaller } from '../hooks';
 
 const navigationList = [
