@@ -300,3 +300,11 @@ p {
     margin: 0;
   }
 }
+
+.registration-link {
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  margin-top: 12px;
+}
