@@ -299,7 +299,7 @@ p {
   }
 }
 
-//* Gradient going from yellow to green
+/* Gradient going from yellow to green
 background: rgb(215, 255, 79);
 background: linear-gradient(
   10deg,
