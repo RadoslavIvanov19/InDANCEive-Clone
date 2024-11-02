@@ -298,3 +298,13 @@ p {
     margin: 0;
   }
 }
+
+//* Gradient going from yellow to green
+background: rgb(215, 255, 79);
+background: linear-gradient(
+  10deg,
+  rgba(215, 255, 79, 1) 0%,
+  rgba(245, 233, 93, 1) 25%,
+  rgba(50, 217, 102, 1) 84%,
+  rgba(5, 177, 111, 1) 100%
+);
