@@ -3,37 +3,37 @@ import { customElement } from "lit/decorators.js";
 
 const choreographersList = [
   {
-    personName: "BILYANA TSOLOVA",
+    personName: "???",
     url: "https://www.instagram.com/bibliq/",
     urlTitle: "@bibliq",
     img: "BILYANA-TSOLOVA.jpg",
   },
   {
-    personName: "VANYA SANTEVA",
+    personName: "???",
     url: "https://www.instagram.com/nyanishh",
     urlTitle: "@nyanishh",
     img: "VANYA-SANTEVA.jpg",
   },
   {
-    personName: "MARIA-YOANNA TOTLYAKOVA",
+    personName: "???",
     url: "https://www.instagram.com/_totlyakova",
     urlTitle: "@_totlyakova",
     img: "MARIA-YOANNA-TOTLYAKOVA.jpg",
   },
   {
-    personName: "MARIANA STETSENKO",
+    personName: "???",
     url: "https://www.instagram.com/maaaariannaaaa",
     urlTitle: "@maaaariannaaaa",
     img: "MARIANA-STETSENKO.jpg",
   },
   {
-    personName: "ALEKSANDRA SIMEONOVA",
+    personName: "???",
     url: "https://www.instagram.com/julto.drakonche",
     urlTitle: "@julto.drakonche",
     img: "ALEKSANDRA-SIMEONOVA.jpg",
   },
   {
-    personName: "SVETLIN VALKOV",
+    personName: "???",
     url: "https://www.instagram.com/svxt_txc",
     urlTitle: "@svxt_txc",
     img: "SVETLIN-VALKOV.jpg",
