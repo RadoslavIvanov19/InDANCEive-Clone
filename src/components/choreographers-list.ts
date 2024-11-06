@@ -47,27 +47,39 @@ export class ChoreographersList extends LitElement {
   choreographersListTwo = [
     {
       personName: "???",
+      url: "#",
       img: "../../vol-two/questionMark.svg",
+      urlTitle: "",
     },
     {
       personName: "???",
+      url: "#",
       img: "../../vol-two/questionMark.svg",
+      urlTitle: "",
     },
     {
       personName: "???",
+      url: "#",
       img: "../../vol-two/questionMark.svg",
+      urlTitle: "",
     },
     {
       personName: "???",
+      url: "#",
       img: "../../vol-two/questionMark.svg",
+      urlTitle: "",
     },
     {
       personName: "???",
+      url: "#",
       img: "../../vol-two/questionMark.svg",
+      urlTitle: "",
     },
     {
       personName: "???",
+      url: "#",
       img: "../../vol-two/questionMark.svg",
+      urlTitle: "",
     },
   ];
   
@@ -165,7 +177,7 @@ export class ChoreographersList extends LitElement {
               <div class="choreographer-info">
                 <a href=${url}>
                   <h2>${personName}</h2>
-                  <span>${urlTitle}</span>
+                  ${urlTitle ? html`<span>${urlTitle}</span>` : ''}
                 </a>
               </div>
             </div>

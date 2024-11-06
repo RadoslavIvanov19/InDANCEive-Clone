@@ -1,24 +1,19 @@
-import desktop from "../public/vol-one/DesktopHeader.jpg"
-import tablet from "../public/vol-one/TabletHeader.jpg";
-import mobile from "../public/vol-one/MobileHeader.jpg";
+import { LitElement, css, html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 
-import { LitElement, css, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import desktopVol1 from "/vol-one/DesktopHeader.jpg"
+import tabletVol1 from "/vol-one/TabletHeader.jpg";
+import mobileVol1 from "/vol-one/MobileHeader.jpg";
+
+import desktopVol2 from "/vol-one/DesktopHeader.jpg";
+import tabletVol2 from "/vol-one/TabletHeader.jpg";
+import mobileVol2 from "/vol-one/MobileHeader.jpg";
 
 const mobileMaxWidth = 425;
 const tabletMaxWidth = 769;
 
-const getDefaultHeader = () => {
-  if (window.innerWidth < mobileMaxWidth) {
-    return mobile;
-  } else if (window.innerWidth < tabletMaxWidth && window.innerWidth < mobileMaxWidth) {
-    return tablet;
-  }
-  return desktop;
-}
-
 @customElement('hero-image')
-export class MyElement extends LitElement {
+export class HeroImage extends LitElement {
   static styles = css`
     header img {
       width: 100%;
@@ -26,29 +21,33 @@ export class MyElement extends LitElement {
       height: auto;
       margin-top: 60px;
     }
-  `
-  @property({
-    type: {
-      currentHeader: HTMLElement,
+  `;
+
+  @property({ type: String }) volume = 'one';
+
+  private getDefaultHeader() {
+    const isVolumeOne = this.volume === 'one';
+
+    if (window.innerWidth < mobileMaxWidth) {
+      return isVolumeOne ? mobileVol1 : mobileVol2;
+    } else if (window.innerWidth < tabletMaxWidth) {
+      return isVolumeOne ? tabletVol1 : tabletVol2;
+    } else {
+      return isVolumeOne ? desktopVol1 : desktopVol2;
     }
-  })
-  currentHeader = getDefaultHeader();
+  }
+
+  @property({ type: String }) currentHeader = this.getDefaultHeader();
 
   private updateHeaderImage() {
-    const headerImage = document.querySelector<HTMLImageElement>("#header-image");
+    const headerImage = this.shadowRoot?.querySelector<HTMLImageElement>("#header-image");
     if (headerImage) {
       headerImage.src = this.currentHeader;
     }
   }
 
   private checkScreenSize = () => {
-    if (window.innerWidth < mobileMaxWidth) {
-      this.currentHeader = mobile;
-    } else if (window.innerWidth < tabletMaxWidth && window.innerWidth < mobileMaxWidth) {
-      this.currentHeader = tablet;
-    } else {
-      this.currentHeader = desktop;
-    }
+    this.currentHeader = this.getDefaultHeader();
     this.updateHeaderImage();
   };
 
@@ -57,14 +56,23 @@ export class MyElement extends LitElement {
     window.addEventListener('resize', this.checkScreenSize);
     this.updateHeaderImage();
   }
+
   disconnectedCallback() {
     window.removeEventListener('resize', this.checkScreenSize);
     super.disconnectedCallback();
   }
 
+  updated(changedProperties: any) {
+    if (changedProperties.has('volume')) {
+      // Re-evaluate the header image when the volume changes
+      this.currentHeader = this.getDefaultHeader();
+      this.updateHeaderImage();
+    }
+  }
+
   render() {
     return html`
-      <header>                 
+      <header>
         <img id="header-image" src="${this.currentHeader}" alt="Header Image" />
       </header>
     `;
