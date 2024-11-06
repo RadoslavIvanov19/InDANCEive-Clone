@@ -252,7 +252,7 @@ p {
 
     &:hover {
       cursor: pointer;
-      color: #f5e95d;
+      color: #01381b;
       transform: translate(-5px, -5px);
       box-shadow: 12px 12px 0 #32d966;
     }
