@@ -1,18 +1,18 @@
-import { LitElement, css, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { LitElement, css, html } from "lit";
+import { customElement, property } from "lit/decorators.js";
 
-import desktopVol1 from "/vol-one/DesktopHeader.jpg"
+import desktopVol1 from "/vol-one/DesktopHeader.jpg";
 import tabletVol1 from "/vol-one/TabletHeader.jpg";
 import mobileVol1 from "/vol-one/MobileHeader.jpg";
 
-import desktopVol2 from "/vol-one/DesktopHeader.jpg";
-import tabletVol2 from "/vol-one/TabletHeader.jpg";
-import mobileVol2 from "/vol-one/MobileHeader.jpg";
+import desktopVol2 from "/vol-two/DesktopHeader.jpg";
+import tabletVol2 from "/vol-two/TabletHeader.jpg";
+import mobileVol2 from "/vol-two/MobileHeader.jpg";
 
 const mobileMaxWidth = 425;
 const tabletMaxWidth = 769;
 
-@customElement('hero-image')
+@customElement("hero-image")
 export class HeroImage extends LitElement {
   static styles = css`
     header img {
@@ -23,10 +23,10 @@ export class HeroImage extends LitElement {
     }
   `;
 
-  @property({ type: String }) volume = 'one';
+  @property({ type: String }) volume = "one";
 
   private getDefaultHeader() {
-    const isVolumeOne = this.volume === 'one';
+    const isVolumeOne = this.volume === "one";
 
     if (window.innerWidth < mobileMaxWidth) {
       return isVolumeOne ? mobileVol1 : mobileVol2;
@@ -40,7 +40,8 @@ export class HeroImage extends LitElement {
   @property({ type: String }) currentHeader = this.getDefaultHeader();
 
   private updateHeaderImage() {
-    const headerImage = this.shadowRoot?.querySelector<HTMLImageElement>("#header-image");
+    const headerImage =
+      this.shadowRoot?.querySelector<HTMLImageElement>("#header-image");
     if (headerImage) {
       headerImage.src = this.currentHeader;
     }
@@ -53,17 +54,17 @@ export class HeroImage extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    window.addEventListener('resize', this.checkScreenSize);
+    window.addEventListener("resize", this.checkScreenSize);
     this.updateHeaderImage();
   }
 
   disconnectedCallback() {
-    window.removeEventListener('resize', this.checkScreenSize);
+    window.removeEventListener("resize", this.checkScreenSize);
     super.disconnectedCallback();
   }
 
   updated(changedProperties: any) {
-    if (changedProperties.has('volume')) {
+    if (changedProperties.has("volume")) {
       // Re-evaluate the header image when the volume changes
       this.currentHeader = this.getDefaultHeader();
       this.updateHeaderImage();
