@@ -1,32 +1,32 @@
-@import "./variables.css";
+@import "/src/styles/variables.css";
 
-@font-face {
+/* @font-face {
   font-family: "Orbitron";
-  src: url("../fonts/Orbitron/Orbitron-Regular.ttf");
+  src: url("/fonts/Orbitron/Orbitron-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Orbitron";
-  src: url("../fonts/Orbitron/Orbitron-Bold.ttf");
+  src: url("/fonts/Orbitron/Orbitron-Bold.ttf");
   font-weight: 600;
   font-style: bold;
 }
 
 @font-face {
   font-family: "ChakraPetch";
-  src: url("../fonts/ChakraPetch/ChakraPetch-Regular.ttf");
+  src: url("/fonts/ChakraPetch/ChakraPetch-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "ChakraPetch";
-  src: url("../fonts/ChakraPetch/ChakraPetch-Bold.ttf");
+  src: url("/fonts/ChakraPetch/ChakraPetch-Bold.ttf");
   font-weight: 600;
   font-style: bold;
-}
+} */
 
 * {
   touch-action: manipulation;
@@ -44,11 +44,10 @@ h5 {
   font-family: "Orbitron", sans-serif;
   font-weight: 400;
   text-align: center;
-  color: #32d966;
+  color: #353394;
 }
 
 h1 {
-  color: #32d966;
   font-size: 40px;
   margin-bottom: 50px;
   word-break: break-word;
@@ -58,6 +57,7 @@ h1 {
     max-width: 400px;
     margin: 20px auto 65px auto;
   }
+  
   @media (min-width: 768px) {
     font-size: 65px;
     max-width: 600px;
@@ -98,11 +98,11 @@ li {
       rgba(255, 255, 255, 0) 11%
     ),
     linear-gradient(
-      10deg,
-      rgba(215, 255, 79, 1) 0%,
-      rgba(245, 233, 93, 1) 25%,
-      rgba(50, 217, 102, 1) 84%,
-      rgba(5, 177, 111, 1) 100%
+      -10deg,
+      rgba(47, 50, 147, 1) 0%,
+      rgba(55, 51, 147, 1) 25%,
+      rgba(221, 95, 164, 1) 84%,
+      rgba(249, 210, 228, 1) 100%
     );
   overflow: hidden;
   z-index: 0;
@@ -124,15 +124,16 @@ li {
 
   @media (min-width: 768px) {
     padding: 100px 60px;
+    /* padding: 100px 100px; */
   }
 }
 
 .contentWrapper {
   padding: 20px;
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 5px;
   box-shadow: 6px 8px 30px 0px #00000070;
-  color: #000000;
+  color: #353394;
 
   ul {
     padding: 0 0 0 20px;
@@ -147,6 +148,7 @@ li {
 
 body {
   margin: 0;
+  background: red !important;
 }
 
 p {
@@ -160,7 +162,7 @@ p {
 
 .schedule {
   padding: 30px;
-  color: #000000;
+  color: #353394;
   text-align: center;
 
   h2,
@@ -213,7 +215,7 @@ p {
 
 .footer {
   padding: 50px 30px 90px 30px;
-  background-color: #32d966;
+  background-color: #353394;
 
   p {
     display: block;
@@ -245,7 +247,11 @@ p {
 .signInWrapper {
   padding: 100px 30px;
   text-align: center;
-  background: linear-gradient(+10deg, rgba(215, 255, 79, 1) 0%, #80792c 100%);
+  background: linear-gradient(
+    +10deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(249, 210, 228, 1) 100%
+  );
 
   .signInLink {
     display: inline-block;
@@ -254,17 +260,17 @@ p {
     font-size: 20px;
     font-weight: bold;
     background: white;
-    color: #32d966;
+    color: #353394;
     border: none;
-    box-shadow: 7px 7px 0 #32d966;
+    box-shadow: 7px 7px 0 #353394;
     text-decoration: none;
-    transition: 0.3s ease-out;
-
+    transition: .3s ease-out;
+    
     &:hover {
       cursor: pointer;
-      color: #f5e95d;
+      color: #DD5FA4;
       transform: translate(-5px, -5px);
-      box-shadow: 12px 12px 0 #32d966;
+      box-shadow: 12px 12px 0 #353394;
     }
   }
 
@@ -272,63 +278,3 @@ p {
     padding: 150px 50px 150px 50px;
   }
 }
-
-/* Above stylings are archived but will be reused for new web page */
-
-.loading-wrapper {
-  background: url("../public/vol-two/loading/background-min.jpg");
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  h1 {
-    margin: 0;
-    text-align: center;
-    font-weight: 700;
-    font-size: 85px;
-  }
-
-  h2 {
-    margin: 0;
-  }
-}
-
-.registration-link {
-  color: white;
-  font-family: "Orbitron", sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  margin-top: 12px;
-}
-
-/* Gradient going from yellow to green
-background: rgb(215, 255, 79);
-background: linear-gradient(
-  10deg,
-  rgba(215, 255, 79, 1) 0%,
-  rgba(245, 233, 93, 1) 25%,
-  rgba(50, 217, 102, 1) 84%,
-  rgba(5, 177, 111, 1) 100%
-  );
-  
-  .gradientWrapper {
-    position: relative;
-    margin-top: -5px;
-    padding: 50px 15px;
-    background: radial-gradient(
-        at top right,
-        rgb(249, 210, 228, 0.7) 0%,
-        rgba(255, 255, 255, 0) 11%
-      ),
-      linear-gradient(
-  10deg,
-  rgba(215, 255, 79, 1) 0%,
-  rgba(245, 233, 93, 1) 25%, #f5e95d
-  rgba(50, 217, 102, 1) 84%,
-  rgba(5, 177, 111, 1) 100%
-  );
-      overflow: hidden;
-      z-index: 0;*/

@@ -1,0 +1,70 @@
+/* @import "./variables.css"; */
+
+* {
+  touch-action: manipulation;
+}
+
+ html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 40px;
+  margin-bottom: 50px;
+  word-break: break-word;
+
+  @media (min-width: 426px) {
+    font-size: 50px;
+    max-width: 400px;
+    margin: 20px auto 65px auto;
+  }
+  
+  @media (min-width: 768px) {
+    font-size: 65px;
+    max-width: 600px;
+  }
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  @media (min-width: 426px) {
+    font-size: 40px;
+  }
+}
+
+.loading-wrapper {
+  background: url("../public/loading/background-min.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 85px;
+  }
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.registration-link {
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  margin-top: 12px;
+}
