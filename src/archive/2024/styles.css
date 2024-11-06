@@ -1,4 +1,4 @@
-@import "/src/styles/variables.css";
+/* @import "/src/styles/variables.css"; */
 
 /* @font-face {
   font-family: "Orbitron";
@@ -148,7 +148,6 @@ li {
 
 body {
   margin: 0;
-  background: red !important;
 }
 
 p {

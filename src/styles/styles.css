@@ -1,4 +1,4 @@
-/* @import "./variables.css"; */
+@import "./variables.css";
 
 /* @font-face {
   font-family: "Orbitron";
@@ -28,23 +28,13 @@
   font-style: bold;
 } */
 
-/* * {
-  touch-action: manipulation;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: "Orbitron", sans-serif;
-  font-weight: 400;
-  text-align: center;
   color: #32d966;
+  font-family: "Orbitron";
 }
 
 h1 {
@@ -271,7 +261,7 @@ p {
   @media (min-width: 426px) {
     padding: 150px 50px 150px 50px;
   }
-} */
+}
 
 /* Above stylings are archived but will be reused for new web page */
 
