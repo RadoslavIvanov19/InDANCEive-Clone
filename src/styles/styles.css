@@ -1,6 +1,6 @@
 /* @import "./variables.css"; */
 
-/* @font-face {
+@font-face {
   font-family: "Orbitron";
   src: url("../fonts/Orbitron/Orbitron-Regular.ttf");
   font-weight: 400;
@@ -26,9 +26,8 @@
   src: url("../fonts/ChakraPetch/ChakraPetch-Bold.ttf");
   font-weight: 600;
   font-style: bold;
-} */
-
-/* * {
+}
+*/ {
   touch-action: manipulation;
 }
 
@@ -245,7 +244,7 @@ p {
 .signInWrapper {
   padding: 100px 30px;
   text-align: center;
-  background: linear-gradient(+10deg, rgba(215, 255, 79, 1) 0%, #80792c 100%);
+  background: linear-gradient(+10deg, rgba(215, 255, 79, 1) 0%, #a89e4f 100%);
 
   .signInLink {
     display: inline-block;
@@ -271,7 +270,8 @@ p {
   @media (min-width: 426px) {
     padding: 150px 50px 150px 50px;
   }
-} */
+}
+*/
 
 /* Above stylings are archived but will be reused for new web page */
 
@@ -332,3 +332,21 @@ background: linear-gradient(
   );
       overflow: hidden;
       z-index: 0;*/
+
+.header-banner {
+  background-image: url("/public/vol-two/Full-HD_Desktop_1920x1080px.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.header-content {
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a translucent overlay */
+  padding: 20px;
+  border-radius: 8px;
+}
