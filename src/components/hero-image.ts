@@ -23,10 +23,10 @@ export class HeroImage extends LitElement {
     }
   `;
 
-  @property({ type: String }) volume = 'vol1';
+  @property({ type: String }) volume = 'one';
 
   private getDefaultHeader() {
-    const isVolumeOne = this.volume === 'vol1';
+    const isVolumeOne = this.volume === 'one';
 
     if (window.innerWidth < mobileMaxWidth) {
       return isVolumeOne ? mobileVol1 : mobileVol2;
