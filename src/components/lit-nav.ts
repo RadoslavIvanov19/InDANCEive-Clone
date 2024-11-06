@@ -5,10 +5,10 @@ import cross from "/vol-one/cross.svg";
 import { isTabletOrSmaller } from '../hooks';
 
 const navigationList = [
-  { title: '- home', url: '#home' },
-  { title: '- choreographers', url: '#choreographers' },
-  { title: '- schedule', url: '#info' },
-  { title: '- contacts', url: '#contacts' },
+  { title: '- home', url: '/' },
+  { title: '- choreographers', url: '/#choreographers' },
+  { title: '- schedule', url: '/#info' },
+  { title: '- contacts', url: '/#contacts' },
   { title: '- archive', url: '/archive' },
 ];
 
