@@ -77,7 +77,17 @@
       </p>
 
     </div>
-    <div class="noiseFilter"></div>
+    <svg class="noiseFilter" xmlns='http://www.w3.org/2000/svg'>
+      <filter id='noiseFilter'>
+      <feTurbulence 
+          type='fractalNoise' 
+          baseFrequency='19.5' 
+          numOctaves='10' 
+          result="feTurbulence"
+          />
+      </filter>
+      <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
+    </svg>
   </div>
   <h2 id="choreographers" class="choreographersTitle">Choreographers</h2>
   <choreographers-list volume="two"></choreographers-list>

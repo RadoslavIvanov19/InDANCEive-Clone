@@ -1,8 +1,12 @@
 import { LitElement, css, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
+import { isTabletOrSmaller } from './hooks';
+
 import hamburger from "/vol-two/hamburger.svg";
-import cross from "/vol-one/cross.svg";
-import { isTabletOrSmaller } from '../hooks';
+import cross from "/vol-two/cross.svg";
+
+import hamburgerVol1 from "/vol-one/hamburger.svg";
+import crossVol1 from "/vol-one/cross.svg";
 
 const navigationList = [
   { title: '- home', url: '/' },
@@ -11,6 +15,21 @@ const navigationList = [
   { title: '- contacts', url: '/#contacts' },
   { title: '- archive', url: '/archive' },
 ];
+
+function getIcons(volume: string) {
+  const icons: any = {
+    one: {
+      hamburger: hamburgerVol1,
+      cross: crossVol1,
+    },
+    two: {
+      hamburger: hamburger,
+      cross: cross,
+    },
+  };
+
+  return icons[volume] || icons.two; 
+}
 
 @customElement('lit-nav')
 export class Navigation extends LitElement {
@@ -99,6 +118,7 @@ export class Navigation extends LitElement {
 
   render() {
     const linkColor = this.volume === 'one' ? '#353394' : '#22b35e';
+    const {hamburger, cross} = getIcons(this.volume);
 
     return html`
       <div class="navigationWrapper ${this.isMobileState ? 'mobile' : 'desktop'}">
