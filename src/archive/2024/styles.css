@@ -113,7 +113,7 @@ li {
     left: 0;
     height: 100%;
     width: 100%;
-    background: url(/noise.svg);
+    background: url(/src/public/vol-one/noise.svg);
     opacity: 0.4;
     z-index: -1;
   }

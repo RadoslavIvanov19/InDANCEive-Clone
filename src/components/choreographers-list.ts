@@ -103,6 +103,10 @@ export class ChoreographersList extends LitElement {
       max-width: 240px;
     }
 
+    .choreographer.two a {
+      color: #07893c;
+    }
+
     .choreographer-image {
       height: 240px;
       width: 240px;
@@ -169,7 +173,7 @@ export class ChoreographersList extends LitElement {
       <div class="flexWrapper">
         ${this.choreographers.map(
           ({ personName, url, urlTitle, img }) => html`
-            <div class="choreographer">
+            <div class="choreographer ${this.volume}" >
               <div
                 class="choreographer-image"
                 style="background: url(${img}) center no-repeat; background-size: contain;"

@@ -1,6 +1,6 @@
 import { LitElement, css, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-import hamburger from "/vol-one/hamburger.svg";
+import hamburger from "/vol-two/hamburger.svg";
 import cross from "/vol-one/cross.svg";
 import { isTabletOrSmaller } from '../hooks';
 
@@ -98,7 +98,7 @@ export class Navigation extends LitElement {
   }
 
   render() {
-    const linkColor = this.volume === 'one' ? '#353394' : '#32d966';
+    const linkColor = this.volume === 'one' ? '#353394' : '#22b35e';
 
     return html`
       <div class="navigationWrapper ${this.isMobileState ? 'mobile' : 'desktop'}">

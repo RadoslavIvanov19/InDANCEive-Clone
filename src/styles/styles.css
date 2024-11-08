@@ -1,44 +1,16 @@
 @import "./variables.css";
 
-/* @font-face {
-  font-family: "Orbitron";
-  src: url("../fonts/Orbitron/Orbitron-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Orbitron";
-  src: url("../fonts/Orbitron/Orbitron-Bold.ttf");
-  font-weight: 600;
-  font-style: bold;
-}
-
-@font-face {
-  font-family: "ChakraPetch";
-  src: url("../fonts/ChakraPetch/ChakraPetch-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ChakraPetch";
-  src: url("../fonts/ChakraPetch/ChakraPetch-Bold.ttf");
-  font-weight: 600;
-  font-style: bold;
-} */
-
 h1,
 h2,
 h3,
 h4,
 h5 {
-  color: #32d966;
+  color: #22b35e;
   font-family: "Orbitron";
 }
 
 h1 {
-  color: #32d966;
+  color: #22b35e;
   font-size: 40px;
   margin-bottom: 50px;
   word-break: break-word;
@@ -122,7 +94,7 @@ li {
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 6px 8px 30px 0px #00000070;
-  color: #000000;
+  color: #1e954f;
 
   ul {
     padding: 0 0 0 20px;
@@ -150,7 +122,7 @@ p {
 
 .schedule {
   padding: 30px;
-  color: #000000;
+  color: #1e954f;
   text-align: center;
 
   h2,
@@ -203,7 +175,7 @@ p {
 
 .footer {
   padding: 50px 30px 90px 30px;
-  background-color: #32d966;
+  background-color: #22b35e;
 
   p {
     display: block;
@@ -235,7 +207,7 @@ p {
 .signInWrapper {
   padding: 100px 30px;
   text-align: center;
-  background: linear-gradient(+10deg, rgba(215, 255, 79, 1) 0%, #80792c 100%);
+  background: linear-gradient(+10deg, #ffffff 0%, #FFF200 100%);
 
   .signInLink {
     display: inline-block;
@@ -243,18 +215,18 @@ p {
     font-family: "Orbitron", sans-serif;
     font-size: 20px;
     font-weight: bold;
-    background: white;
-    color: #32d966;
+    background: #ffffff;
+    color: #116333;
     border: none;
-    box-shadow: 7px 7px 0 #32d966;
+    box-shadow: 7px 7px 0 #116333;
     text-decoration: none;
     transition: 0.3s ease-out;
 
     &:hover {
       cursor: pointer;
-      color: #01381b;
+      color: #22b35e;
       transform: translate(-5px, -5px);
-      box-shadow: 12px 12px 0 #32d966;
+      box-shadow: 12px 12px 0 #116333;
     }
   }
 
