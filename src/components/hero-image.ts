@@ -65,7 +65,6 @@ export class HeroImage extends LitElement {
 
   updated(changedProperties: any) {
     if (changedProperties.has("volume")) {
-      // Re-evaluate the header image when the volume changes
       this.currentHeader = this.getDefaultHeader();
       this.updateHeaderImage();
     }

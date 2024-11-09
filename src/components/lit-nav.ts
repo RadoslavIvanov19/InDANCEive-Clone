@@ -9,10 +9,15 @@ import hamburgerVol1 from "/vol-one/hamburger.svg";
 import crossVol1 from "/vol-one/cross.svg";
 
 const navigationList = [
+  { title: '- home', url: '#' },
+  { title: '- choreographers', url: '#choreographers' },
+  { title: '- schedule', url: '#info' },
+  { title: '- contacts', url: '#contacts' },
+  { title: '- archive', url: '/archive' },
+];
+
+const archiveNavigationList = [
   { title: '- home', url: '/' },
-  { title: '- choreographers', url: '/#choreographers' },
-  { title: '- schedule', url: '/#info' },
-  { title: '- contacts', url: '/#contacts' },
   { title: '- archive', url: '/archive' },
 ];
 
@@ -34,6 +39,7 @@ function getIcons(volume: string) {
 @customElement('lit-nav')
 export class Navigation extends LitElement {
   @property({ type: String }) volume = '';
+  @property({ type: String }) page = '';
 
   static styles = css`
     .navigationWrapper {
@@ -119,6 +125,7 @@ export class Navigation extends LitElement {
   render() {
     const linkColor = this.volume === 'one' ? '#353394' : '#22b35e';
     const {hamburger, cross} = getIcons(this.volume);
+    const navItems = this.page === "archive" ? archiveNavigationList : navigationList;
 
     return html`
       <div class="navigationWrapper ${this.isMobileState ? 'mobile' : 'desktop'}">
@@ -126,7 +133,7 @@ export class Navigation extends LitElement {
           <img src=${!this.isVisible ? hamburger : cross}>
         </button>
         <nav class="navigation ${this.isVisible ? 'visible' : null}">
-          ${navigationList.map(({ url, title }) => html`
+          ${navItems.map(({ url, title }) => html`
             <a 
               href=${url} 
               @click=${this.toggleNav} 
