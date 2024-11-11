@@ -1,30 +1,46 @@
-import { LitElement, css, html } from 'lit'
-import { customElement, state } from 'lit/decorators.js'
-import hamburger from "../../public/vol-one/hamburger.svg";
-import cross from "../../public/vol-one/cross.svg";
-import { isTabletOrSmaller } from '../hooks';
+import { LitElement, css, html } from 'lit';
+import { customElement, property, state } from 'lit/decorators.js';
+import { isTabletOrSmaller } from './hooks';
+
+import hamburger from "/vol-two/hamburger.svg";
+import cross from "/vol-two/cross.svg";
+
+import hamburgerVol1 from "/vol-one/hamburger.svg";
+import crossVol1 from "/vol-one/cross.svg";
 
 const navigationList = [
-  {
-    title: '- home',
-    url: '#home',
-  },
-  {
-    title: '- choreographers',
-    url: '#choreographers',
-  },
-  {
-    title: '- schedule',
-    url: '#info',
-  },
-  {
-    title: '- contacts',
-    url: '#contacts',
-  },
+  { title: '- home', url: '#' },
+  { title: '- choreographers', url: '#choreographers' },
+  { title: '- schedule', url: '#info' },
+  { title: '- contacts', url: '#contacts' },
+  { title: '- archive', url: '/archive' },
 ];
+
+const archiveNavigationList = [
+  { title: '- home', url: '/' },
+  { title: '- archive', url: '/archive' },
+];
+
+function getIcons(volume: string) {
+  const icons: any = {
+    one: {
+      hamburger: hamburgerVol1,
+      cross: crossVol1,
+    },
+    two: {
+      hamburger: hamburger,
+      cross: cross,
+    },
+  };
+
+  return icons[volume] || icons.two; 
+}
 
 @customElement('lit-nav')
 export class Navigation extends LitElement {
+  @property({ type: String }) volume = '';
+  @property({ type: String }) page = '';
+
   static styles = css`
     .navigationWrapper {
       background: white;
@@ -35,19 +51,13 @@ export class Navigation extends LitElement {
       z-index: 10;
     }
 
-    .navigationWrapper.desktop {
-      .hamburger {
-        display: none;
-      }
+    .navigationWrapper.desktop .hamburger {
+      display: none;
+    }
 
-      .navigation {
-        display: block;
-        padding: 20px;
-
-        @media (min-width: 768px) {
-          padding-left: 40px
-        }
-      }
+    .navigationWrapper.desktop .navigation {
+      display: block;
+      padding: 20px;
     }
 
     .navigation {
@@ -66,14 +76,9 @@ export class Navigation extends LitElement {
       font-family: "ChakraPetch", sans-serif;
       font-size: 25px;
       font-weight: bold;
-      color: #353394;
       text-decoration: none;
       padding: 10px;
       transition: 0.1s;
-
-      &:hover {
-        color: #DD5FA4;
-      }
     }
 
     .navigation.visible {
@@ -97,42 +102,54 @@ export class Navigation extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    window.addEventListener('resize', () => {
-      this.isMobileState = isTabletOrSmaller();
-    });
-  };
+    window.addEventListener('resize', this.updateMobileState);
+  }
 
   disconnectedCallback() {
-    window.removeEventListener('resize', () => {
-      this.isMobileState = isTabletOrSmaller();
-    });
+    window.removeEventListener('resize', this.updateMobileState);
     super.disconnectedCallback();
-  };
+  }
+
+  private updateMobileState = () => {
+    this.isMobileState = isTabletOrSmaller();
+  }
 
   private toggleNavVisibility() {
-    this.isVisible = !this.isVisible
-  };
+    this.isVisible = !this.isVisible;
+  }
 
   private toggleNav() {
     this.toggleNavVisibility();
-  };
+  }
 
   render() {
+    const linkColor = this.volume === 'one' ? '#353394' : '#22b35e';
+    const {hamburger, cross} = getIcons(this.volume);
+    const navItems = this.page === "archive" ? archiveNavigationList : navigationList;
+
     return html`
-    <div class="navigationWrapper ${this.isMobileState ? 'mobile' : 'desktop'}">
-      <button class="hamburger" @click=${this.toggleNav}>
-        <img src=${ !this.isVisible ? hamburger : cross}>
-      </button>
-      <nav class="navigation ${this.isVisible ? 'visible' : null}">
-        ${navigationList.map(({ url, title }) => html`<a href=${url} @click=${this.toggleNav}>${title}</a>`)}
-      </nav>
-    </div>
-    `
-  };
-};
+      <div class="navigationWrapper ${this.isMobileState ? 'mobile' : 'desktop'}">
+        <button class="hamburger" @click=${this.toggleNav}>
+          <img src=${!this.isVisible ? hamburger : cross}>
+        </button>
+        <nav class="navigation ${this.isVisible ? 'visible' : null}">
+          ${navItems.map(({ url, title }) => html`
+            <a 
+              href=${url} 
+              @click=${this.toggleNav} 
+              style="color: ${linkColor};"
+            >
+              ${title}
+            </a>
+          `)}
+        </nav>
+      </div>
+    `;
+  }
+}
 
 declare global {
   interface HTMLElementTagNameMap {
-    'lit-nav': Navigation
+    'lit-nav': Navigation;
   }
-};
+}

@@ -1,53 +1,16 @@
 @import "./variables.css";
 
-@font-face {
-  font-family: "Orbitron";
-  src: url("../fonts/Orbitron/Orbitron-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Orbitron";
-  src: url("../fonts/Orbitron/Orbitron-Bold.ttf");
-  font-weight: 600;
-  font-style: bold;
-}
-
-@font-face {
-  font-family: "ChakraPetch";
-  src: url("../fonts/ChakraPetch/ChakraPetch-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ChakraPetch";
-  src: url("../fonts/ChakraPetch/ChakraPetch-Bold.ttf");
-  font-weight: 600;
-  font-style: bold;
-}
-
-* {
-  touch-action: manipulation;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: "Orbitron", sans-serif;
-  font-weight: 400;
-  text-align: center;
-  color: #353394;
+  color: #22b35e;
+  font-family: "Orbitron";
 }
 
 h1 {
+  color: #22b35e;
   font-size: 40px;
   margin-bottom: 50px;
   word-break: break-word;
@@ -97,11 +60,11 @@ li {
       rgba(255, 255, 255, 0) 11%
     ),
     linear-gradient(
-      -10deg,
-      rgba(47, 50, 147, 1) 0%,
-      rgba(55, 51, 147, 1) 25%,
-      rgba(221, 95, 164, 1) 84%,
-      rgba(249, 210, 228, 1) 100%
+      10deg,
+      rgba(50, 217, 102, 1) 0%,
+      rgba(5, 177, 111, 1) 25%,
+      rgba(215, 255, 79, 1) 84%,
+      rgba(245, 233, 93, 1) 100%
     );
   overflow: hidden;
   z-index: 0;
@@ -112,7 +75,7 @@ li {
     left: 0;
     height: 100%;
     width: 100%;
-    background: url(/noise.svg);
+    /* background: url(/src/public/vol-two/); */
     opacity: 0.4;
     z-index: -1;
   }
@@ -123,16 +86,15 @@ li {
 
   @media (min-width: 768px) {
     padding: 100px 60px;
-    /* padding: 100px 100px; */
   }
 }
 
 .contentWrapper {
   padding: 20px;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 6px 8px 30px 0px #00000070;
-  color: #353394;
+  color: #1e954f;
 
   ul {
     padding: 0 0 0 20px;
@@ -160,7 +122,7 @@ p {
 
 .schedule {
   padding: 30px;
-  color: #353394;
+  color: #1e954f;
   text-align: center;
 
   h2,
@@ -213,7 +175,7 @@ p {
 
 .footer {
   padding: 50px 30px 90px 30px;
-  background-color: #353394;
+  background-color: #22b35e;
 
   p {
     display: block;
@@ -245,11 +207,7 @@ p {
 .signInWrapper {
   padding: 100px 30px;
   text-align: center;
-  background: linear-gradient(
-    +10deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(249, 210, 228, 1) 100%
-  );
+  background: linear-gradient(+10deg, #ffffff 0%, #FFF200 100%);
 
   .signInLink {
     display: inline-block;
@@ -257,18 +215,18 @@ p {
     font-family: "Orbitron", sans-serif;
     font-size: 20px;
     font-weight: bold;
-    background: white;
-    color: #353394;
+    background: #ffffff;
+    color: #116333;
     border: none;
-    box-shadow: 7px 7px 0 #353394;
+    box-shadow: 7px 7px 0 #116333;
     text-decoration: none;
-    transition: .3s ease-out;
-    
+    transition: 0.3s ease-out;
+
     &:hover {
       cursor: pointer;
-      color: #DD5FA4;
+      color: #22b35e;
       transform: translate(-5px, -5px);
-      box-shadow: 12px 12px 0 #353394;
+      box-shadow: 12px 12px 0 #116333;
     }
   }
 

@@ -1,0 +1,21 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+* {
+    touch-action: manipulation;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}

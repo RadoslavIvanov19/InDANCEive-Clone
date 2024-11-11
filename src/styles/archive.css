@@ -1,0 +1,105 @@
+.archiveWrapper {
+    margin-top: 110px;
+}
+
+.headline {
+    font-size: 60px;
+    font-weight: bold;
+    padding: 60px 0;
+}
+
+.yearVariantsWrapper {
+    padding-bottom: 10px;
+
+    ul {
+        list-style: none;
+        padding: 0 30px;
+    }
+}
+
+.year {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.editionWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 13px 15px 13px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    box-shadow: 6px 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.versionWrapper {
+    display: flex;
+    vertical-align: middle;
+}
+
+.versionImage {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    align-self: center;
+}
+
+.versionHeadline {
+    display: inline-block;
+    margin: 0;
+    padding-left: 15px;
+    align-self: center;
+}
+
+.linksWrapper {
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+
+    a {
+        font-family: "ChakraPetch", sans-serif;
+        font-weight: bold;
+        color: #3b53dd;
+        font-size: 18px;
+        text-decoration: none;
+
+         &:hover {
+            text-decoration: underline;
+            color: #293a99;
+         }
+    }
+}
+
+.linksDivider {
+    border: 1px solid #7070705e;
+    height: 100%;
+    margin: 0 7px 0 5px;
+}
+
+.externalLinkIcon, .photosIcon {
+    width: 20px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+    .yearVariantsWrapper {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    .linksWrapper {
+        a {
+            font-size: 20px;
+        }
+    }
+
+    .editionWrapper {
+        padding: 20px;
+    }
+
+    .linksDivider {
+        margin: 0 10px;
+    }
+}

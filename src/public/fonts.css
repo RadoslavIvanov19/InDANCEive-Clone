@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Orbitron";
+    src: url("/fonts/Orbitron/Orbitron-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url("/fonts/Orbitron/Orbitron-Bold.ttf");
+    font-weight: 600;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: "ChakraPetch";
+    src: url("/fonts/ChakraPetch/ChakraPetch-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ChakraPetch";
+    src: url("/fonts/ChakraPetch/ChakraPetch-Bold.ttf");
+    font-weight: 600;
+    font-style: bold;
+}
