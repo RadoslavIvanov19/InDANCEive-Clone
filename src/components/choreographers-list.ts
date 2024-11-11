@@ -1,47 +1,92 @@
 import { LitElement, css, html } from "lit";
-import { customElement } from "lit/decorators.js";
-
-const choreographersList = [
-  {
-    personName: "BILYANA TSOLOVA",
-    url: "https://www.instagram.com/bibliq/",
-    urlTitle: "@bibliq",
-    img: "BILYANA-TSOLOVA.jpg",
-  },
-  {
-    personName: "VANYA SANTEVA",
-    url: "https://www.instagram.com/nyanishh",
-    urlTitle: "@nyanishh",
-    img: "VANYA-SANTEVA.jpg",
-  },
-  {
-    personName: "MARIA-YOANNA TOTLYAKOVA",
-    url: "https://www.instagram.com/_totlyakova",
-    urlTitle: "@_totlyakova",
-    img: "MARIA-YOANNA-TOTLYAKOVA.jpg",
-  },
-  {
-    personName: "MARIANA STETSENKO",
-    url: "https://www.instagram.com/maaaariannaaaa",
-    urlTitle: "@maaaariannaaaa",
-    img: "MARIANA-STETSENKO.jpg",
-  },
-  {
-    personName: "ALEKSANDRA SIMEONOVA",
-    url: "https://www.instagram.com/julto.drakonche",
-    urlTitle: "@julto.drakonche",
-    img: "ALEKSANDRA-SIMEONOVA.jpg",
-  },
-  {
-    personName: "SVETLIN VALKOV",
-    url: "https://www.instagram.com/svxt_txc",
-    urlTitle: "@svxt_txc",
-    img: "SVETLIN-VALKOV.jpg",
-  },
-];
+import { customElement, property } from "lit/decorators.js";
 
 @customElement("choreographers-list")
 export class ChoreographersList extends LitElement {
+  @property({ type: String }) volume = 'one';
+
+  choreographersListOne = [
+    {
+      personName: "BILYANA TSOLOVA",
+      url: "https://www.instagram.com/bibliq/",
+      urlTitle: "@bibliq",
+      img: "../../vol-one/choreographers-img/BILYANA-TSOLOVA.jpg",
+    },
+    {
+      personName: "VANYA SANTEVA",
+      url: "https://www.instagram.com/nyanishh",
+      urlTitle: "@nyanishh",
+      img: "../../vol-one/choreographers-img/VANYA-SANTEVA.jpg",
+    },
+    {
+      personName: "MARIA-YOANNA TOTLYAKOVA",
+      url: "https://www.instagram.com/_totlyakova",
+      urlTitle: "@_totlyakova",
+      img: "../../vol-one/choreographers-img/MARIA-YOANNA-TOTLYAKOVA.jpg",
+    },
+    {
+      personName: "MARIANA STETSENKO",
+      url: "https://www.instagram.com/maaaariannaaaa",
+      urlTitle: "@maaaariannaaaa",
+      img: "../../vol-one/choreographers-img/MARIANA-STETSENKO.jpg",
+    },
+    {
+      personName: "ALEKSANDRA SIMEONOVA",
+      url: "https://www.instagram.com/julto.drakonche",
+      urlTitle: "@julto.drakonche",
+      img: "../../vol-one/choreographers-img/ALEKSANDRA-SIMEONOVA.jpg",
+    },
+    {
+      personName: "SVETLIN VALKOV",
+      url: "https://www.instagram.com/svxt_txc",
+      urlTitle: "@svxt_txc",
+      img: "../../vol-one/choreographers-img/SVETLIN-VALKOV.jpg",
+    },
+  ];
+  
+  choreographersListTwo = [
+    {
+      personName: "???",
+      url: "#",
+      img: "../../vol-two/questionMark.svg",
+      urlTitle: "",
+    },
+    {
+      personName: "???",
+      url: "#",
+      img: "../../vol-two/questionMark.svg",
+      urlTitle: "",
+    },
+    {
+      personName: "???",
+      url: "#",
+      img: "../../vol-two/questionMark.svg",
+      urlTitle: "",
+    },
+    {
+      personName: "???",
+      url: "#",
+      img: "../../vol-two/questionMark.svg",
+      urlTitle: "",
+    },
+    {
+      personName: "???",
+      url: "#",
+      img: "../../vol-two/questionMark.svg",
+      urlTitle: "",
+    },
+    {
+      personName: "???",
+      url: "#",
+      img: "../../vol-two/questionMark.svg",
+      urlTitle: "",
+    },
+  ];
+  
+  get choreographers() {
+    return this.volume === 'one' ? this.choreographersListOne : this.choreographersListTwo;
+  }
+
   static styles = css`
     .flexWrapper {
       display: flex;
@@ -56,6 +101,10 @@ export class ChoreographersList extends LitElement {
       background-color: white;
       box-shadow: 6px 8px 30px rgba(0, 0, 0, 0.25);
       max-width: 240px;
+    }
+
+    .choreographer.two a {
+      color: #07893c;
     }
 
     .choreographer-image {
@@ -118,13 +167,13 @@ export class ChoreographersList extends LitElement {
       }
     }
   `;
-
+  
   render() {
     return html`
       <div class="flexWrapper">
-        ${choreographersList.map(
+        ${this.choreographers.map(
           ({ personName, url, urlTitle, img }) => html`
-            <div class="choreographer">
+            <div class="choreographer ${this.volume}" >
               <div
                 class="choreographer-image"
                 style="background: url(${img}) center no-repeat; background-size: contain;"
@@ -132,7 +181,7 @@ export class ChoreographersList extends LitElement {
               <div class="choreographer-info">
                 <a href=${url}>
                   <h2>${personName}</h2>
-                  <span>${urlTitle}</span>
+                  ${urlTitle ? html`<span>${urlTitle}</span>` : ''}
                 </a>
               </div>
             </div>
