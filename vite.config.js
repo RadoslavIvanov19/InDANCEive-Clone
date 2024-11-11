@@ -9,5 +9,9 @@ export default defineConfig({
         main: 'src/index.html',
         archive: 'src/archive.html',
         volumeOne: 'src/archive/2024/indanceive-vol-1.html',
+    },
+    build: {
+        outDir: '../dist',
+        emptyOutDir: true,
     }
 }) 
