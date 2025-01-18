@@ -48,19 +48,19 @@ export class ChoreographersList extends LitElement {
     {
       personName: "KATINA PLOSHTAKOVA",
       url: "https://www.instagram.com/kkachi_d/",
-      img: "../../vol-two/choreographers-img/Katina Ploshtakova.jpg",
+      img: "../../vol-two/choreographers-img/katina-ploshtakova.jpg",
       urlTitle: "@kkachi_d",
     },
     {
       personName: "MARIANA STETSENKO",
       url: "https://www.instagram.com/maaaariannaaaa",
-      img: "../../vol-two/choreographers-img/Mariana-Stetsenko.jpg",
+      img: "../../vol-two/choreographers-img/mariana-stetsenko.jpg",
       urlTitle: "@maaaariannaaaa",
     },
     {
       personName: "MARIA-YOANNA TOTLYAKOVA",
       url: "https://www.instagram.com/_totlyakova",
-      img: "../../vol-two/choreographers-img/Maria-Yoanna-Totlyakova.jpg",
+      img: "../../vol-two/choreographers-img/maria-yoanna-totlyakova.jpg",
       urlTitle: "@_totlyakova",
     },
     {
