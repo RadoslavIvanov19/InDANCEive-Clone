@@ -146,12 +146,8 @@ export class ChoreographersList extends LitElement {
 
     .choreographer-info > a:hover {
       text-decoration: underline;
-      color: #353394;
     }
 
-    .choreographer-info > a:link:visited {
-      color: #353394;
-    }
 
     .choreographer-info h2 {
       margin-top: 10px;
@@ -181,9 +177,9 @@ export class ChoreographersList extends LitElement {
                 style="background: url(${img}) center no-repeat; background-size: contain;"
               ></div>
               <div class="choreographer-info">
-                <a href=${url}>
+                <a href=${url} class="${this.volume}">
                   <h2>${personName}</h2>
-                  ${urlTitle ? html`<span>${urlTitle}</span>` : ""}
+                  ${urlTitle ? html`<span here>${urlTitle}</span>` : ""}
                 </a>
               </div>
             </div>
