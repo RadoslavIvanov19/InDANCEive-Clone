@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("choreographers-list")
 export class ChoreographersList extends LitElement {
-  @property({ type: String }) volume = 'one';
+  @property({ type: String }) volume = "one";
 
   choreographersListOne = [
     {
@@ -43,25 +43,25 @@ export class ChoreographersList extends LitElement {
       img: "../../vol-one/choreographers-img/SVETLIN-VALKOV.jpg",
     },
   ];
-  
+
   choreographersListTwo = [
     {
-      personName: "???",
-      url: "#",
-      img: "../../vol-two/questionMark.svg",
-      urlTitle: "",
+      personName: "KATINA PLOSHTAKOVA",
+      url: "https://www.instagram.com/kkachi_d/",
+      img: "../../vol-two/choreographers-img/katina-ploshtakova.jpg",
+      urlTitle: "@kkachi_d",
     },
     {
-      personName: "???",
-      url: "#",
-      img: "../../vol-two/questionMark.svg",
-      urlTitle: "",
+      personName: "MARIANA STETSENKO",
+      url: "https://www.instagram.com/maaaariannaaaa",
+      img: "../../vol-two/choreographers-img/mariana-stetsenko.jpg",
+      urlTitle: "@maaaariannaaaa",
     },
     {
-      personName: "???",
-      url: "#",
-      img: "../../vol-two/questionMark.svg",
-      urlTitle: "",
+      personName: "MARIA-YOANNA TOTLYAKOVA",
+      url: "https://www.instagram.com/_totlyakova",
+      img: "../../vol-two/choreographers-img/maria-yoanna-totlyakova.jpg",
+      urlTitle: "@_totlyakova",
     },
     {
       personName: "???",
@@ -82,9 +82,11 @@ export class ChoreographersList extends LitElement {
       urlTitle: "",
     },
   ];
-  
+
   get choreographers() {
-    return this.volume === 'one' ? this.choreographersListOne : this.choreographersListTwo;
+    return this.volume === "one"
+      ? this.choreographersListOne
+      : this.choreographersListTwo;
   }
 
   static styles = css`
@@ -144,12 +146,8 @@ export class ChoreographersList extends LitElement {
 
     .choreographer-info > a:hover {
       text-decoration: underline;
-      color: #353394;
     }
 
-    .choreographer-info > a:link:visited {
-      color: #353394;
-    }
 
     .choreographer-info h2 {
       margin-top: 10px;
@@ -167,21 +165,21 @@ export class ChoreographersList extends LitElement {
       }
     }
   `;
-  
+
   render() {
     return html`
       <div class="flexWrapper">
         ${this.choreographers.map(
           ({ personName, url, urlTitle, img }) => html`
-            <div class="choreographer ${this.volume}" >
+            <div class="choreographer ${this.volume}">
               <div
                 class="choreographer-image"
                 style="background: url(${img}) center no-repeat; background-size: contain;"
               ></div>
               <div class="choreographer-info">
-                <a href=${url}>
+                <a href=${url} class="${this.volume}">
                   <h2>${personName}</h2>
-                  ${urlTitle ? html`<span>${urlTitle}</span>` : ''}
+                  ${urlTitle ? html`<span here>${urlTitle}</span>` : ""}
                 </a>
               </div>
             </div>
