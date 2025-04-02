@@ -101,10 +101,25 @@ li {
     padding: 0 0 0 20px;
   }
 
+  .signInLink {
+    transform: translateX(-50%);
+    margin: 20px 0 20px 50%;
+    padding: 20px 25px;
+    font-size: 18px;
+
+    &:hover {
+      transform: translate(calc(-50% - 5px), -5px);
+    }
+  }
+
   @media (min-width: 426px) {
     padding: 40px 50px;
     margin: 0 auto;
     max-width: 650px;
+
+    .signInLink {
+      padding: 20px 60px;
+    }
   }
 }
 
@@ -333,59 +348,32 @@ p {
   text-align: center;
   background: linear-gradient(+10deg, #ffffff 0%, #fff200 100%);
 
-  .signInLink {
-    display: inline-block;
-    padding: 20px 60px;
-    font-family: "Orbitron", sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    background: #ffffff;
-    color: #116333;
-    border: none;
-    box-shadow: 7px 7px 0 #116333;
-    text-decoration: none;
-    transition: 0.3s ease-out;
-
-    &:hover {
-      cursor: pointer;
-      color: #22b35e;
-      transform: translate(-5px, -5px);
-      box-shadow: 12px 12px 0 #116333;
-    }
-  }
-
   @media (min-width: 426px) {
     padding: 150px 50px 150px 50px;
   }
 }
 
-/* .signInWrapperContentWrapper {
-  padding: 100px 30px;
-  text-align: center;
-  /* background: linear-gradient(+10deg, #ffffff 0%, #fff200 100%); */
+.signInLink {
+  display: inline-block;
+  padding: 20px 60px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  background: #ffffff;
+  color: #116333;
+  border: none;
+  box-shadow: 7px 7px 0 #116333;
+  text-decoration: none;
+  transition: 0.3s ease-out;
 
-/* .signInLink {
-    display: inline-block;
-    padding: 20px 60px;
-    font-family: "Orbitron", sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    background: #ffffff;
-    color: #116333;
-    border: none;
-    box-shadow: 7px 7px 0 #116333;
-    text-decoration: none;
-    transition: 0.3s ease-out;
-
-    &:hover {
-      cursor: pointer;
-      color: #22b35e;
-      transform: translate(-5px, -5px);
-      box-shadow: 12px 12px 0 #116333;
-    }
+  &:hover {
+    cursor: pointer;
+    color: #22b35e;
+    transform: translate(-5px, -5px);
+    box-shadow: 12px 12px 0 #116333;
   }
+}
 
-  @media (min-width: 426px) {
-    padding: 150px 50px 150px 50px;
-  }
-} */
+.signInLink--green {
+  background: #eaffea;
+}
