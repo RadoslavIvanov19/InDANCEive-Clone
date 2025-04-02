@@ -64,21 +64,27 @@ export class ChoreographersList extends LitElement {
       urlTitle: "@_totlyakova",
     },
     {
-      personName: "???",
-      url: "#",
-      img: "../../vol-two/questionMark.svg",
-      urlTitle: "",
+      personName: "BILYANA TSOLOVA",
+      url: "https://www.instagram.com/bibliq",
+      img: "../../vol-two/choreographers-img/bilyana-tsolova.jpg",
+      urlTitle: "@bibliq",
     },
     {
-      personName: "???",
-      url: "#",
-      img: "../../vol-two/questionMark.svg",
-      urlTitle: "",
+      personName: "VANYA SANTEVA",
+      url: "https://www.instagram.com/nyanishh",
+      img: "../../vol-two/choreographers-img/vanya-santeva.jpg",
+      urlTitle: "@nyanishh",
     },
     {
-      personName: "???",
-      url: "#",
-      img: "../../vol-two/questionMark.svg",
+      personName: "SVETLIN VALKOV",
+      url: "https://www.instagram.com/svxt_txc",
+      img: "../../vol-two/choreographers-img/svetlin-valkov.jpg",
+      urlTitle: "@svxt_txc",
+    },
+    {
+      personName: "К-POP INDANCEIVE VOL.2 2025",
+      url: "https://www.instagram.com/p/DHEVNHrM0XJ/",
+      img: "../../vol-two/choreographers-img/all-choreographers.jpg",
       urlTitle: "",
     },
   ];
@@ -147,7 +153,6 @@ export class ChoreographersList extends LitElement {
     .choreographer-info > a:hover {
       text-decoration: underline;
     }
-
 
     .choreographer-info h2 {
       margin-top: 10px;
